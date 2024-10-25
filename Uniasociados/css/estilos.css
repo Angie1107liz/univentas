@@ -1,0 +1,107 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos de la barra de navegación en la parte superior */
+.navbar {
+    background: linear-gradient(to right, #ffffff,#2c4389,#2c4389);
+    padding: 15px 30px;
+    border-radius: 0 0 30px 30px; /* Redondeado en la parte inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Estilos de los enlaces */
+.nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover de los enlaces */
+.nav-link:hover {
+    background-color: #f0c23b;
+    color: #2c4389;
+    transform: scale(1.1);
+}
+
+/* Efecto activo para el enlace seleccionado */
+.nav-link:active {
+    background-color: #ff8c00;
+    color: #333;
+    transform: scale(1);
+}
+
+/* Estilos del contenido */
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animación de aparición de la barra */
+@media (prefers-reduced-motion: no-preference) {
+    .navbar {
+        animation: fadeIn 1s ease-out;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.isotipoUni{
+    width: 5%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 33%;
+}
+.botonIniciarSesion{
+    padding: 9px 22px;
+    font-size: 16px;
+    color: white;
+    background-color: #f0c23b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.boton:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+.boton:active {
+    transform: scale(0.9);
+}
+
+/* Carrusel */
+
