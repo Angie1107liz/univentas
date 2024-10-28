@@ -10,6 +10,11 @@
 
     <script src="../js/.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
 
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -23,7 +28,7 @@
             <img src="../img/logoUniasociados.png" class="logoUni" alt="">
             <a href="#home" class="nav-link scrollto active">Inicio</a>
             <a href="#aliados" class="nav-link">Aliados</a>
-            <a href="#about" class="nav-link">Sobre Nosotros</a>
+            <a href="#nosotros" class="nav-link">Sobre Nosotros</a>
             <a href="#contact" class="nav-link">Contacto</a>
             <button type="button"  class="botonIniciarSesion"><i class="fa-solid fa-user"></i> Iniciar sesión</button>
     
@@ -65,59 +70,147 @@
             </div>
 
             <div class="logo-slider-container">
+                <button id="prevButton" class="carousel-control">Atrás</button>
+                <button id="nextButton" class="carousel-control">Adelante</button>
+
+            <div class="logo-slider-container">
                 <div class="logo-slider" id="logoSlider">
-                    <img src="../img/marcas/ponds.png" alt="Logo de POND'S" class="highlighted-logo">
-                    <img src="../img/marcas/rexona.png" alt="Logo de Rexona">
-                    <img src="../img/marcas/Maizena.png" alt="Logo de Maizena">
-                    <img src="../img/marcas/ego.png" alt="Logo de eGo">
-                    <img src="../img/marcas/Dove.png" alt="Logo de Dove">
-                    <img src="../img/marcas/savital.png" alt="Logo de Savital">
+                 <!-- aseo personal -->
+                <img src="../img/marcas/ponds.png" alt="Logo de POND'S" >
+                <img src="../img/marcas/rexona.png" alt="Logo de Rexona">
+                <img src="../img/marcas/rexonaEfficient.png" alt="Logo de rexonaEfficient">
+                <img src="../img/marcas/ego.png" alt="Logo de eGo">
+                <img src="../img/marcas/Dove.png" alt="Logo de Dove">
+                <img src="../img/marcas/babyDove.png" alt="Logo de BabyDove">
+                <img src="../img/marcas/savital.png" alt="Logo de Savital">
+                <img src="../img/marcas/fortident.png" alt="Logo de fortident ">
+                <img src="../img/marcas/sedal.png" alt="Logo de sedal">
+                <img src="../img/marcas/vaseline.png" alt="Logo de vaseline">
+                <img src="../img/marcas/axe.png" alt="Logo de axe">
+                <img src="../img/marcas/lux.png" alt="Logo de lux ">
+                <!-- fin de aseo personal -->
+                <img src="../img/marcas/3d.png" alt="Logo de ">
+                <img src="../img/marcas/ak1.png" alt="Logo de ">
+                <img src="../img/marcas/aromatel.png" alt="Logo de ">
+                <img src="../img/marcas/barrigón.png" alt="Logo de ">
+                <img src="../img/marcas/coco.png" alt="Logo de ">
+                <img src="../img/marcas/fab.png" alt="Logo de ">
+                <img src="../img/marcas/lavoMatic.png" alt="Logo de ">
+                <img src="../img/marcas/puro.png" alt="Logo de ">
+                <img src="../img/marcas/puro.png" alt="Logo de ">
+                <img src="../img/marcas/" alt="Logo de ">
+                <!-- hogar  -->
+                <img src="../img/marcas/Maizena.png" alt="Logo de ">
+                <img src="../img/marcas/delHuerto.png" alt="Logo de ">
+                <img src="../img/marcas/fruco.png" alt="Logo de ">
+                <img src="../img/marcas/Knorr.png" alt="Logo de ">
+                <!-- fin hogar -->
+                <!-- alimentos -->
+                <img src="../img/marcas/Maizena.png" alt="Logo de Maizena">
+                <img src="../img/marcas/fruco.png" alt="Logo de fruco" >
+                <!-- fin de alimentos  -->
+
+
                     <!-- Duplicamos los logos para que el deslizador sea continuo -->
-                    <img src="../img/marcas/fruco.png" alt="Logo de fruco" >
-                    <img src="../img/marcas/rexona.png" alt="Logo de Rexona">
-                    <img src="../img/marcas/Maizena.png" alt="Logo de Maizena">
-                    <img src="../img/marcas/ego.png" alt="Logo de eGo">
-                    <img src="../img/marcas/Dove.png" alt="Logo de Dove">
-                    <img src="../img/marcas/savital.png" alt="Logo de Savital">
+                    <img src="../img/marcas/" alt="Logo de Rexona">
+                    
                 </div>
-            </div>             
-        </div>
-      </section>            
+                </div>
 
+             </div>             
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </section>   
 
 
       
+    <section id="nosotros">
+        <h1 class="tituloNosotros">El Equipo de Uniasociados</h1>    
+        <div class="container">
+            <div class="card-client">
+                <div class="user-picture">
+                    <i class="fas fa-user-circle"></i> <!-- Ícono de usuario -->
+                </div>
+                <p class="name-client">Jhon Doe
+                    <span>CEO of WritBook</span>
+                </p>
+                <div class="social-media">
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="tooltip-social">Twitter</span>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="tooltip-social">Instagram</span>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="tooltip-social">Facebook</span>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="tooltip-social">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <section>
+        <h1 class="tituloContacto">Contactos</h1>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- footer section -->
       <footer class="footer_section">
         <div class="container">
@@ -195,8 +288,9 @@
       <!-- custom js -->
       <script src="js/custom.js"></script>
       <!-- Google Map -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>    
       <!-- End Google Map -->
     
 

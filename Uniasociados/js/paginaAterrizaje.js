@@ -25,15 +25,29 @@ showSlide(currentSlide);
 
 // Segundo carrusel 
 const logoSlider = document.getElementById('logoSlider');
-const sliderWidth = logoSlider.scrollWidth / 2; // Mitad para mantener un loop infinito
-let offset = 0;
+let autoScroll;
+let scrollAmount = 200; // Controla cuánto se desplaza el carrusel con cada clic
 
-function slideLogos() {
-    offset += 100; // Ajusta este valor para el ancho de desplazamiento
-    if (offset >= sliderWidth) {
-        offset = 0; // Reinicia el desplazamiento al llegar al final
-    }
-    logoSlider.style.transform = `translateX(-${offset}px)`;
+// Iniciar desplazamiento automático
+function startAutoScroll() {
+    autoScroll = setInterval(() => {
+        logoSlider.scrollLeft += 1;
+    }, 20);
 }
 
-setInterval(slideLogos, 1000); // Desplaza cada 3 segundos
+// Detener desplazamiento automático
+function stopAutoScroll() {
+    clearInterval(autoScroll);
+}
+
+// Avanzar y retroceder usando los botones
+document.getElementById('nextButton').addEventListener('click', () => {
+    logoSlider.scrollLeft += scrollAmount;
+});
+
+document.getElementById('prevButton').addEventListener('click', () => {
+    logoSlider.scrollLeft -= scrollAmount;
+});
+
+// Iniciar desplazamiento automático al cargar la página
+startAutoScroll();
