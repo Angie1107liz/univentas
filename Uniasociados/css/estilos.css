@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+
 /* Estilos generales */
 * {
     margin: 0;
@@ -12,23 +14,90 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Inicio del fondo azul */
+.hero_area {
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bg-box.cortar-fondo {
+    display: none;
+}
+ 
+  
+  .bg-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Debe estar debajo del carrusel */
+  }
+  
+  .bg-box img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .sub_page .hero_area {
+    min-height: auto;
+  }
+  
+  .sub_page .hero_area .bg-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sub_page .hero_area .bg-box img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right top;
+       object-position: right top;
+  }
+  
+  .header_section {
+    padding: 15px 0;
+  }
+  
+  .header_section .container-fluid {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  /* fin del fondo azul */
 
 /* Estilos de la barra de navegación en la parte superior */
 .navbar {
-    background: linear-gradient(to right, #ffffff,#2c4389,#2c4389);
-    padding: 15px 30px;
+    position: relative;
+    z-index: 2; /* Mayor que el fondo y el carrusel */
+    /* background: linear-gradient(to right, #ffffff, #2c4389, #2c4389); */
+    background-color: #fff;
+    padding: 2px 40px; /* Ajustamos el padding */
     border-radius: 0 0 30px 30px; /* Redondeado en la parte inferior */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 20px;
     justify-content: center;
     transition: all 0.3s ease;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
 
 /* Estilos de los enlaces */
 .nav-link {
-    color: #ffffff;
-    font-size: 18px;
+    color: #2c4389;
+    font-size: 1rem; /* Cambiamos a rem para la responsividad */
     font-weight: bold;
     text-decoration: none;
     padding: 9px 12px;
@@ -76,15 +145,20 @@ body {
         opacity: 1;
     }
 }
-.isotipoUni{
-    width: 5%;
-    height: 10%;
+
+/* Logo */
+.logoUni {
+    width: 20%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 33%;
+    margin: 0 auto; /* Centramos con auto */
+    margin-right: 30%;
 }
-.botonIniciarSesion{
+
+/* Botón de iniciar sesión */
+.botonIniciarSesion {
     padding: 9px 22px;
     font-size: 16px;
     color: white;
@@ -94,14 +168,327 @@ body {
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
 }
-.boton:hover {
+
+.botonIniciarSesion:hover {
     transform: scale(1.1);
     background-color: #0056b3;
 }
 
-.boton:active {
+.botonIniciarSesion:active {
     transform: scale(0.9);
 }
 
-/* Carrusel */
+/* Carrusel inicio */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 90%; /* Hace que el ancho sea responsive */
+    max-width: 1000px; /* Limita el ancho máximo */
+    margin: 1rem auto; /* Centramos el contenedor */
+    height: 31rem;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 50px 70px rgba(0, 0, 0, 0.1); /* Añade una sombra para que destaque */
+    text-align: center;
 
+    position: relative;
+    z-index: 2; /* Superior al fondo */
+    margin-top: 53px; /* Ajusta la distancia desde la parte superior */
+ 
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Botones de control del carrusel */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Imagen de aterrizaje */
+.imagenAterrizaje {
+    width: 100%; /* Usamos 100% para que sea responsive */
+    max-width: 85.5rem; /* Limita el ancho máximo */
+    height: 32rem; /* Altura automática para mantener proporciones */
+    margin: -2.5% auto; /* Centramos verticalmente */
+
+}
+
+/* Media Queries para hacer responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px; /* Ajustamos el padding */
+    }
+
+    .nav-link {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+        padding: 2px 5; /* Ajustamos padding */
+    }
+
+    .carousel-container {
+        width: 95%; /* Menos espacio en pantallas pequeñas */
+        height: 25rem; /* Altura ajustada */
+        padding: 10px; /* Menos padding */
+    }
+
+    .logoUni {
+        width: 30%; /* Aumentamos el ancho del logo */
+        margin: 10px auto; /* Centramos */
+    }
+
+    .botonIniciarSesion {
+        font-size: 14px; /* Ajustamos el tamaño del botón */
+        padding: 8px 16px; /* Ajustamos el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 5px; /* Ajustamos el padding */
+    }
+
+    .nav-link {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+        padding: 6px 8px; /* Ajustamos padding */
+    }
+
+    .carousel-container {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 20rem; /* Altura ajustada */
+    }
+
+    .logoUni {
+        width: 40%; /* Ancho del logo más pequeño */
+    }
+
+    .botonIniciarSesion {
+        font-size: 12px; /* Ajustamos el tamaño del botón */
+        padding: 6px 12px; /* Ajustamos el padding */
+    }
+
+    .slide {
+        font-size: 1.2em; /* Ajustamos el tamaño de fuente */
+        padding: 15px; /* Ajustamos el padding */
+    }
+}
+/* Aliados */
+.Aliados{
+    z-index: 3;
+}
+/* Footer inicio */
+/* footer section*/
+.footer_section {
+    background-color: #2c4188;
+    color: #ffbe33;
+    padding: 75px 0 40px 0;
+    text-align: center;
+  }
+  
+  .footer_section h4 {
+    font-size: 28px;
+  }
+  
+  .footer_section h4,
+  .footer_section .footer-logo {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .footer_section p {
+    color: #ffbe33;
+  }
+  
+  .footer_section .footer-col {
+    margin-bottom: 30px;
+  }
+  
+  .footer_section .footer_contact .contact_link_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .footer_section .footer_contact .contact_link_box a {
+    margin: 5px 0;
+    color: #ffbe33;
+  }
+  
+  .footer_section .footer_contact .contact_link_box a i {
+    margin-right: 5px;
+  }
+  
+  .footer_section .footer_contact .contact_link_box a:hover {
+    color: #ffbe33;
+  }
+  
+  .footer_section .footer-logo {
+    display: block;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1;
+    color: #ffbe33;
+  }
+  
+  .footer_section .footer_social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer_section .footer_social a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #222831;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin: 0 2.5px;
+    font-size: 18px;
+  }
+  
+  .footer_section .footer_social a:hover {
+    color: #ffbe33;
+  }
+  
+  .footer_section .footer-info {
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .footer_section .footer-info p {
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .footer_section .footer-info p a {
+    color: inherit;
+  }
+  #redesFooter{
+
+    width: 100%;
+  }
+  /*Footer fin  */
+
+  /* Inicio Aliados  */
+.titulos{
+    font-weight: 600;
+    margin-top: 4%;
+    margin-bottom: 40px;
+    color: #d84539;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+.textoAliado{ 
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 22px;
+    padding: 1px 3px 5px;
+}
+.imagenesAliados{
+
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+}
+#imgUnilever{
+
+    height: 15rem;
+    width: 16rem;
+    padding: 24px 16px;
+    margin-bottom: 2rem;
+    margin-top: -16%;
+}
+  /* Fin aliados  */
+
+
+
+  /* Segundo carrusel */
+/* Contenedor del deslizador */
+.logo-slider-container {
+    overflow: hidden;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Deslizador con los logos */
+.logo-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de cada logo */
+.logo-slider img {
+    max-height: 60px;
+    margin: 10px;
+}
+
+/* Logo destacado con borde */
+.highlighted-logo {
+    border: 2px solid purple;
+    padding: 5px;
+    border-radius: 5px;
+}
+  
+/* fin de segundo carrsuel  */
