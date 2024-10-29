@@ -1,53 +1,46 @@
-let currentSlide = 0;
+// inicio Presentacion de pagina slider
+document.addEventListener("DOMContentLoaded", function () {
+    const logos = document.querySelectorAll(".logo-slider img");
+    const categoryButtons = document.querySelectorAll(".category-buttons button");
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    slides.forEach(slide => slide.classList.remove('active'));
+    // Mantener el estado de la categoría actual
+    let currentCategory = "bellezaBienestar";
 
-    if (index >= slides.length) currentSlide = 0;
-    else if (index < 0) currentSlide = slides.length - 1;
-    else currentSlide = index;
+    // Mostrar los logos con deslizamiento
+    function filterImages(category) {
+        if (currentCategory === category) return; // No hacer nada si la categoría es la misma
+        const direction = category === currentCategory ? 'slide-left' : 'slide-right';
+        
+        // Ocultar logos actuales
+        logos.forEach(logo => {
+            if (logo.classList.contains(currentCategory)) {
+                logo.classList.remove("active");
+                logo.classList.add(direction);
+            }
+        });
 
-    slides[currentSlide].classList.add('active');
-}
+        // Mostrar nuevos logos
+        logos.forEach(logo => {
+            if (logo.classList.contains(category)) {
+                logo.classList.add("active");
+                logo.classList.remove("slide-left", "slide-right");
+            }
+        });
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
+        // Actualizar la categoría actual
+        currentCategory = category;
+    }
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
+    // Agregar evento de clic a los botones de categoría
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const category = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            filterImages(category);
+        });
+    });
 
-// Inicializa el carrusel mostrando la primera diapositiva
-showSlide(currentSlide);
-
-
-// Segundo carrusel 
-const logoSlider = document.getElementById('logoSlider');
-let autoScroll;
-let scrollAmount = 200; // Controla cuánto se desplaza el carrusel con cada clic
-
-// Iniciar desplazamiento automático
-function startAutoScroll() {
-    autoScroll = setInterval(() => {
-        logoSlider.scrollLeft += 1;
-    }, 20);
-}
-
-// Detener desplazamiento automático
-function stopAutoScroll() {
-    clearInterval(autoScroll);
-}
-
-// Avanzar y retroceder usando los botones
-document.getElementById('nextButton').addEventListener('click', () => {
-    logoSlider.scrollLeft += scrollAmount;
+    // Mostrar logos de la primera categoría por defecto
+    filterImages("bellezaBienestar");
 });
 
-document.getElementById('prevButton').addEventListener('click', () => {
-    logoSlider.scrollLeft -= scrollAmount;
-});
-
-// Iniciar desplazamiento automático al cargar la página
-startAutoScroll();
+// fin de pagina de presentacion slider 
