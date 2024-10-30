@@ -15,312 +15,356 @@ body {
     min-height: 100vh;
 }
 
-/* inicio Barra de nevgacion  */
-
+/* Barra de navegación */
 .navbar {    
-  position: relative;
-  z-index: 2; /* Mayor que el fondo y el carrusel */
-  /* background: linear-gradient(to right, #ffffff, #2c4389, #2c4389); */
-  background-color: #fff;
-  padding: 2px 40px; /* Ajustamos el padding */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    position: relative;
+    z-index: 2;
+    height: 7rem;
+    background-color: #ffffffe8;
+    border-radius: 10px 175px;
+    padding: 0% 3%; /* Usar porcentajes para mejor adaptación */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-wrap: wrap;
 }
+
 /* Estilos de los enlaces */
 .nav-link {
-  color: #2c4389;
-  font-size: 1rem; /* Cambiamos a rem para la responsividad */
-  font-weight: bold;
-  text-decoration: none;
-  padding: 9px 12px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+    color: #2c4389;
+    font-size: 1.5rem; /* Cambiamos a rem para la responsividad */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 /* Efecto hover de los enlaces */
 .nav-link:hover {
-  background-color: #f0c23b;
-  color: #2c4389;
-  transform: scale(1.1);
+    background-color: #f0c23b;
+    color: #2c4389;
+    transform: scale(1.1);
 }
 
 /* Efecto activo para el enlace seleccionado */
 .nav-link:active {
-  background-color: #ff8c00;
-  color: #333;
-  transform: scale(1);
+    background-color: #ff8c00;
+    color: #333;
+    transform: scale(1);
 }
 
 /* Estilos del contenido */
 .content {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Animación de aparición de la barra */
 @media (prefers-reduced-motion: no-preference) {
-  .navbar {
-      animation: fadeIn 1s ease-out;
-  }
+    .navbar {
+        animation: fadeIn 1s ease-out;
+    }
 }
 
 @keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Logo */
 .logoUni {
-  width: 20%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto; /* Centramos con auto */
-  margin-right: 30%;
+    width: 20rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
 }
 
 /* Botón de iniciar sesión */
 .botonIniciarSesion {
-  padding: 9px 22px;
-  font-size: 16px;
-  color: white;
-  background-color: #f0c23b;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
+    padding: 9px 22px;
+    font-size: 16px;
+    color: white;
+    background-color: #f0c23b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .botonIniciarSesion:hover {
-  transform: scale(1.1);
-  background-color: #0056b3;
+    transform: scale(1.1);
+    background-color: #0056b3;
 }
 
 .botonIniciarSesion:active {
-  transform: scale(0.9);
+    transform: scale(0.9);
 }
 
-
-
-/* Fin barra de navegacion */
-
-/* Inicio de presentacion pagina  / marcas*/
-
-#home{
-  background-color: #0b1f44;
+/* Presentación de página / marcas */
+#home {
+    background-color: #0b1f44;
 }
-.primerTitulo{
-  position: absolute;
-  font-weight: 600;
-  margin-top: 5%;
-  margin-bottom: 40px;
-  color: #ffffff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  display: flex;
-  justify-content: center;
-  z-index: 10;
-}
-.imagenLogos{
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  z-index: 10;
 
+.primerTitulo {
+    position: absolute;
+    font-weight: 600;
+    margin: 4% auto; /* Centramos y ajustamos */
+    color: #ffffff;
+    font-family: bold;
+    z-index: 10;
+    font-size: 3.5rem; 
+    text-align: center; 
 }
-#imagenLogo{
 
-  width: 17rem;
-  height: 10rem;
-  margin-top: 10rem;
-  margin-left: 1rem;
+/* Media Queries para hacer más responsivo */
+@media (max-width: 1200px) {
+    .primerTitulo {
+        font-size: 1.75rem;
+        margin: 5% auto; /* Ajustado para pantallas grandes */
+    }
 }
-.logoUnilever{
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  z-index: 10;
 
+@media (max-width: 992px) {
+    .primerTitulo {
+        font-size: 1.6rem; /* Tamaño de fuente más pequeño */
+        margin: 5% auto; /* Ajustado para pantallas medianas */
+    }
 }
+
+@media (max-width: 768px) {
+    .primerTitulo {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+@media (max-width: 576px) {
+    .primerTitulo {
+        font-size: 1.3rem; /* Tamaño de fuente aún más pequeño */
+    }
+}
+
+.imagenLogos {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+/* Estilos para el logo */
+#imagenLogo {
+    width: 100%; 
+    max-width: 17rem; 
+    height: auto; 
+    margin: 10rem auto 0; /* Centramos con auto */
+    border-radius: 39px 51px;
+  }
 #imagenLogoUnilever{
-  width: 17rem;
-  height: 10rem;
-  margin-top: 10rem;
-}
-.titulos{
-  font-weight: 600;
-  margin-top: 4%;
-  margin-bottom: 40px;
-  color: #d84539;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  display: flex;
-  justify-content: center;
-
+  width: 100%; 
+  max-width: 17rem; 
+  height: auto; 
+  margin: 10rem auto 0; /* Centramos con auto */
+  margin-left: 5%;
+  border-radius: 39px 51px;
 }
 
-.textoAliado{ 
-  height: 50%;
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 22px;
-  padding: 1px 3px 5px;
+.logoUnilever {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 10;
 }
-.imagenesAliados{
 
-  display: flex;
-  justify-content: flex-end;
-  font-size: 22px;
+/* Media Queries para ajustar en pantallas más pequeñas */
+@media (max-width: 768px) {
+    #imagenLogo, #imagenLogoUnilever {
+        margin-top: 5rem; 
+        max-width: 80%; 
+    }
 }
-#imgUnilever{
 
-  height: 15rem;
-  width: 16rem;
-  padding: 24px 16px;
-  margin-bottom: 2rem;
-  margin-top: -16%;
+@media (max-width: 480px) {
+    #imagenLogo, #imagenLogoUnilever {
+        margin-top: 3rem; 
+        max-width: 90%; 
+    }
 }
-/* inicio de slider de marcas*/
+
+/* Inicio de slider de marcas */
 .logo-slider-container {
-  width: 100%;
-  margin: 20 auto;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Botones de categoría */
 .category-buttons {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .category-buttons button {
-  background-color: #0049c76f;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+    background-color: #0b1f44f2;
+    color: white;
+    border: 0.5px solid rgb(255, 255, 255); 
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 .category-buttons button:hover {
-  background-color: #023e8a;
+    background-color: #5b5f68bc;
 }
 
 /* Estilos del slider */
 .logo-slider {
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Estilos de las imágenes */
 .logo-slider img {
-  display: none;
-
-  width: 20rem;
-  height: auto;
-  /* opacity: 0; */
-  transition: transform 0.5s ease-in-out;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
+    display: none;
+    width: 9rem;
+    margin: 11px;
+    height: 7rem;
+    transition: all 0.3s ease;
+    border-radius: 13%;
 }
 
 .logo-slider img.active {
-  display: inline-block;
-  opacity: 1;
-  transform: translateX(0);
+    display: inline-block;
+    opacity: 1;
+    transform: translateX(0);
 }
+
 .logo-slider img.slide-left {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .logo-slider img.slide-right {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
-
 
 /* Media Queries para que el slider sea responsive */
 @media (max-width: 768px) {
-  .logo-slider-container {
-      width: 90%;
-      padding: 10px;
-  }
+    .logo-slider-container {
+        width: 90%;
+        padding: 10px;
+    }
 
-  .category-buttons button {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-  }
+    .category-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 
-
-  .logo-slider img {
-      width: 60px;
-  }
+    .logo-slider img {
+        width: 60px;
+    }
 }
 
 @media (max-width: 480px) {
-  .logo-slider-container {
-      width: 100%;
-      padding: 5px;
-  }
+    .logo-slider-container {
+        width: 100%;
+        padding: 5px;
+    }
 
-  .category-buttons button {
-      padding: 5px 10px;
-      font-size: 0.8rem;
-  }
+    .category-buttons button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
 
-  .logo-slider img {
-      width: 50px;
-  }
+    .logo-slider img {
+        width: 50px;
+    }
 }
-/* fin de slider de marcas*/
 
+/* Fin de slider de marcas */
+/* Fin de presentación de página / marcas */
 
-/* fin de presentación de pagina /marcas */
+/* Inicio de aliados */
+#aliados{
+  height: 30rem;
+  background-color: #ffffff;
 
+}
+.titulos {
+    font-weight: 600;
+    margin: 4% auto 40px; /* Centramos y ajustamos */
+    color: #d84539;
+    font-family: bold;
+    display: flex;
+    font-size: 3.5rem;
+    justify-content: center;
+} 
+
+.textoAliado { 
+    height: 19rem; /* Cambiado a auto para mejor responsividad */
+    width: 68%; /* Mantener un porcentaje para que se ajuste */
+    display: flex;
+    justify-content: flex-start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+    padding: 15px 3px 5px;
+}
+
+.imagenesAliados {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+}
+
+#imgUnilever {
+    height: 18rem; /* Cambiado a auto para mejor responsividad */
+    width: auto; /* Usar porcentaje para que se adapte */
+    max-width: 27rem; /* Mantiene un límite máximo */
+    padding: 8px 12px 5px;
+    margin: -20rem 0; /* Espaciado arriba y abajo */
+}
+
+/* Fin de aliados */
 
 /* Inicio de nosotros */
 .card-client {
-  background: #5555557a;
-  width: 13rem;
+  background: #2b273900;
+  width: 10rem;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
   border: 4px solid #fff;
-  box-shadow: 0 6px 10px #212121;
+  box-shadow: 0 1px 3px #212121;
   border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: bold;
   transition: all 0.3s ease;
 }
 
 .card-client:hover {
-  transform: translateY(-10px);
+  transform: translateY(-2px);
 }
 
 .user-picture {
@@ -422,19 +466,17 @@ body {
 }
 .tituloNosotros{
   font-weight: 600;
-  margin-top: 4%;
+  font-size: 3.5rem;
+  margin-top: 2%;
   margin-bottom: 40px;
   color:#f0c23b;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: bold;
   display: flex;
   justify-content: center;
 }
 /* fin de nosotros */
 
-/* Aliados */
-.Aliados{
-    z-index: 3;
-}
+
 /* Footer inicio */
 /* footer section*/
 .footer_section {
@@ -452,7 +494,7 @@ body {
   .footer_section .footer-logo {
     font-weight: 600;
     margin-bottom: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:bold;
   }
   
   .footer_section p {
@@ -548,332 +590,236 @@ body {
   }
   .tituloContacto{
     font-weight: 600;
+    font-size: 3.5rem;
     margin-top: 4%;
     margin-bottom: 40px;
     color:#d84539;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: bold;
     display: flex;
     justify-content: center;
   }
+
+  /* iconos redes sociales footer */
   /*Footer fin  */
 
  
 
 
 /* PRUEBA DE NOSOTROS */
-/* ------------------------------
-   NOSOTROS
------------------------------- */
-
-.team {
-  height: 100%;
-  width: 100%;
+.card-client {
+  background: #2a1a5b63;
+  width: 100%; /* Cambiar a 100% para que se ajuste al contenedor */
+  max-width: 13rem; /* Mantener un ancho máximo */
+  padding: 25px 20px; /* Simplificar padding usando la sintaxis abreviada */
+  border: 4px solid #ffffff;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: bold;
+  transition: all 0.3s ease;
 }
 
-.team-member {
-  position: relative;
-  height: 16%;
-  width: 50%;
-}
 
-.team-member img {
-  width: 90px;
-  height: 175px;
+.user-picture {
+  overflow: hidden;
   object-fit: cover;
-  border-radius: 80%;
-  position: absolute;
-  top: 17px;
-  left: 62%;
-  transform: translateX(-110px);
-  transition: all 0.3s;
-}
-
-.team-member:hover img {
-  top: 20px;
-}
-
-.team-member .main-content {
-  border-radius: 25%;
-  padding: 35% 6% 10% 2%;
-  background-color: #f1f0fe;
-  text-align: center;
-}
-
-
-.team-member .main-content span.category {
-  color: #6a1581;
-  font-size: 15px;
-  font-style: oblique;
-}
-
-.team-member .main-content h4 {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 8px 0 15px;
-}
-
-.team-member .main-content ul {
-  padding: 0;
-}
-
-.team-member .main-content ul li {
-  display: inline-block;
-  margin: 0 2px;
-}
-
-.team-member .main-content ul li a {
-  background-color: rgba(255, 255, 255, 0.29);
-  color: #6a1581;
-  text-align: center;
-  line-height: 35px;
-  font-size: 1.3em;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: all 0.3s;
-}
-
-.team-member .main-content ul li a:hover {
-  background-color: #6a1581;
-  color: #fff;
-}
-
-/* Header Section */
-#header {
-  transition: all 0.5s;
-  z-index: 997;
-  height: 10%;
-  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid #f7f7f7;
+  border-radius: 999px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-#header.header-scrolled,
-#header.header-inner-pages {
-  background: black;
+.user-picture svg {
+  width: 2.5rem;
+  fill: currentColor;
 }
 
-#header .logo {
-  font-family: cursive;
-  font-size: 32px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.name-client {
+  margin: 20px 0 0; /* Simplificar margen */
+  font-weight: 600;
+  font-size: 1.125rem; /* Cambiado a rem para la responsividad */
 }
 
-#header .logo a {
-  color: #fff;
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 1rem; /* Cambiado a rem */
 }
 
-/* Social Media Buttons */
-.button {
-  cursor: pointer;
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #ffffff;
+}
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+
+
+/*-- Redes Sociales --*/
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: bold;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
   width: 50px;
   height: 50px;
-  border-radius: 50px;
-  border: none;
-  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  font-size: 18px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-left: 10px;
-  transition: 0.1s;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.button svg {
-  color: white;
-  width: 30px;
-  height: 30px;
-}
-
-.button:active {
-  transform: scale(0.85);
-}
-
-.button::before {
-  content: "";
+.wrapper .tooltip {
   position: absolute;
-  width: 535px;
-  height: 55px;
-  background-color: #a61414;
-  border-radius: 50px;
-  transition: 0.4s;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.button:hover::before {
-  width: 0;
-  height: 0;
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Different colors for specific buttons */
-.button:nth-child(3) {
-  background: linear-gradient(120deg, #02ff2c, #008a12);
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-.button:nth-child(4) {
-  background: rgb(69, 187, 255);
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.button:nth-child(5) {
-  background: rgb(255, 33, 33);
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
 }
 
-.button:nth-child(6) {
-  background: black;
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
 }
 
-/* Responsive Design */
-@media (min-width: 100px) {
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
 
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-    max-width: 100%;
+/* fin de redes sociales */
+
+
+/* Ajustes para la galería */
+.owl-carousel {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto; /* Cambiado a auto para centrar */
+  height: auto; /* Cambiado a auto para mejor adaptabilidad */
+  width: 100%; /* Cambiar a 100% para ajustarse a su contenedor */
+  margin-left: 16%;
+  max-width: 77rem; /* Mantener un ancho máximo */
+}
+
+/* Media Queries para mayor responsividad */
+@media (max-width: 768px) {
+  .card-client {
+    max-width: 100%; /* Se ajusta al 100% en pantallas pequeñas */
+    margin: 1rem 0; /* Espaciado vertical entre tarjetas */
+  }
+
+  .user-picture {
+    width: 4rem; /* Tamaño más pequeño */
+    height: 4rem; /* Tamaño más pequeño */
+  }
+
+  .name-client {
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+  }
+
+  .name-client span {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
   }
 }
 
-/* General Styles */
-.titulo-h1 {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  padding-top: 8%;
-}
+@media (max-width: 576px) {
+  .user-picture {
+    width: 3.5rem; /* Ajustar aún más para pantallas pequeñas */
+    height: 3.5rem; /* Ajustar aún más para pantallas pequeñas */
+  }
 
-.texto-h2 {
-  padding-top: 4%;
-  margin-left: 3%;
-  font-family: "Poppins", sans-serif;
-  color: #6a1581;
-}
+  .name-client {
+    font-size: 0.9rem; /* Tamaño de fuente aún más pequeño */
+  }
 
-.nombre {
-  color: #0a0a0a;
-}
-
-.owl-prev {
-  height: 102%;
-  width: 65%;
-}
-
-.owl-next {
-  height: 102%;
-  width: 65%;
-}
-
-.item {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 24rem;
-}
-
-.card {
-  --main-color: #000;
-  --submain-color: #78858F;
-  --bg-color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  position: relative;
-  width: 21rem;
-  height: 21rem;
-  top: 4%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 20px;
-  background: var(--bg-color);
-  box-shadow: 12px 17px 51px #4927ff40;
-  cursor: pointer;
-  transition: all 0.5s;
-  padding: 0;
-}
-
-.card2 {
-  width: 15rem;
-  height: 12rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all 0.5s;
-  padding: 12px 0 12px 0;
-}
-
-.card__img {
-  height: 192px;
-  width: 100%;
-}
-
-.card__img svg {
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-}
-
-.card__avatar {
-  position: absolute;
-  width: 114px;
-  height: 114px;
-  background: var(--bg-color);
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: calc(50% - 57px);
-}
-
-.card__avatar svg {
-  width: 100px;
-  height: 100px;
-}
-
-.card__title {
-  margin-top: 45%;
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--main-color);
-}
-
-.card__subtitle {
-  margin-top: 8px;
-  font-weight: 400;
-  font-size: 15px;
-  color: var(--submain-color);
-}
-
-.card__btn {
-  margin-top: 15px;
-  width: 76px;
-  height: 31px;
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 11px;
-  color: var(--main-color);
-  background: var(--bg-color);
-  text-transform: uppercase;
-  transition: all 0.3s;
-}
-
-.card__btn-solid {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.card__btn:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.card__btn-solid:hover {
-  background: var(--bg-color);
-  color: var(--main-color);
-}
-
-.row .card {
-  margin: 20px;
+  .name-client span {
+    font-size: 0.75rem; /* Tamaño de fuente aún más pequeño */
+  }
 }
 
 /* FIN DE PRUEBA DE NOSOTROS  */
 
-
-
-
+/* inicio contactanos */
+#contactanos{
+background-color: #ffffff;
+}
+/* fin de contactanos */

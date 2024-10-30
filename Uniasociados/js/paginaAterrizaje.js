@@ -79,23 +79,30 @@ function closeSlider() {
 
 
 $(document).ready(function(){
-    $(".packages-carousel").owlCarousel({
-        items: 3, // Número de tarjetas visibles a la vez
-        loop: true, // Hacer el carrusel en bucle
-        margin: 10, // Espacio entre tarjetas
-        nav: false, // Mostrar botones de navegación
-        autoplay: true, // Activar la reproducción automática
-        autoplayTimeout: 5000, // Tiempo entre transiciones (2 segundos)
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
-    });
+  $(".owl-carousel").owlCarousel({
+      items: 3,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      margin: 10
+  });
 });
+
+
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll hacia abajo - oculta la barra
+    navbar.style.top = "-70px";
+  } else {
+    // Scroll hacia arriba - muestra la barra
+    navbar.style.top = "0";
+  }
+
+  lastScrollTop = scrollTop;
+});  
