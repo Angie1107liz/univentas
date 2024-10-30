@@ -118,7 +118,7 @@ body {
 
 /* Fin barra de navegacion */
 
-/* Inicio de presentacion pagina  / aliados*/
+/* Inicio de presentacion pagina  / marcas*/
 
 #home{
   background-color: #0b1f44;
@@ -240,7 +240,7 @@ body {
 .logo-slider img {
   display: none;
 
-  width: 15rem;
+  width: 20rem;
   height: auto;
   /* opacity: 0; */
   transition: transform 0.5s ease-in-out;
@@ -299,12 +299,12 @@ body {
 /* fin de slider de marcas*/
 
 
-/* fin de presentación de pagina /aliados */
+/* fin de presentación de pagina /marcas */
 
 
 /* Inicio de nosotros */
 .card-client {
-  background: #555;
+  background: #5555557a;
   width: 13rem;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -418,6 +418,7 @@ body {
 }
 #nosotros{
   background-color: #0b1f44;
+  height: 30rem;
 }
 .tituloNosotros{
   font-weight: 600;
@@ -559,7 +560,319 @@ body {
  
 
 
+/* PRUEBA DE NOSOTROS */
+/* ------------------------------
+   NOSOTROS
+------------------------------ */
 
+.team {
+  height: 100%;
+  width: 100%;
+}
+
+.team-member {
+  position: relative;
+  height: 16%;
+  width: 50%;
+}
+
+.team-member img {
+  width: 90px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 80%;
+  position: absolute;
+  top: 17px;
+  left: 62%;
+  transform: translateX(-110px);
+  transition: all 0.3s;
+}
+
+.team-member:hover img {
+  top: 20px;
+}
+
+.team-member .main-content {
+  border-radius: 25%;
+  padding: 35% 6% 10% 2%;
+  background-color: #f1f0fe;
+  text-align: center;
+}
+
+
+.team-member .main-content span.category {
+  color: #6a1581;
+  font-size: 15px;
+  font-style: oblique;
+}
+
+.team-member .main-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 8px 0 15px;
+}
+
+.team-member .main-content ul {
+  padding: 0;
+}
+
+.team-member .main-content ul li {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.team-member .main-content ul li a {
+  background-color: rgba(255, 255, 255, 0.29);
+  color: #6a1581;
+  text-align: center;
+  line-height: 35px;
+  font-size: 1.3em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.team-member .main-content ul li a:hover {
+  background-color: #6a1581;
+  color: #fff;
+}
+
+/* Header Section */
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 10%;
+  justify-content: center;
+  display: flex;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: black;
+}
+
+#header .logo {
+  font-family: cursive;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+/* Social Media Buttons */
+.button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: 0.1s;
+}
+
+.button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.button:active {
+  transform: scale(0.85);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 535px;
+  height: 55px;
+  background-color: #a61414;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+
+.button:hover::before {
+  width: 0;
+  height: 0;
+}
+
+/* Different colors for specific buttons */
+.button:nth-child(3) {
+  background: linear-gradient(120deg, #02ff2c, #008a12);
+}
+
+.button:nth-child(4) {
+  background: rgb(69, 187, 255);
+}
+
+.button:nth-child(5) {
+  background: rgb(255, 33, 33);
+}
+
+.button:nth-child(6) {
+  background: black;
+}
+
+/* Responsive Design */
+@media (min-width: 100px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 100%;
+  }
+}
+
+/* General Styles */
+.titulo-h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.texto-h2 {
+  padding-top: 4%;
+  margin-left: 3%;
+  font-family: "Poppins", sans-serif;
+  color: #6a1581;
+}
+
+.nombre {
+  color: #0a0a0a;
+}
+
+.owl-prev {
+  height: 102%;
+  width: 65%;
+}
+
+.owl-next {
+  height: 102%;
+  width: 65%;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 24rem;
+}
+
+.card {
+  --main-color: #000;
+  --submain-color: #78858F;
+  --bg-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  width: 21rem;
+  height: 21rem;
+  top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--bg-color);
+  box-shadow: 12px 17px 51px #4927ff40;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 0;
+}
+
+.card2 {
+  width: 15rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s;
+  padding: 12px 0 12px 0;
+}
+
+.card__img {
+  height: 192px;
+  width: 100%;
+}
+
+.card__img svg {
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.card__avatar {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+  background: var(--bg-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 57px);
+}
+
+.card__avatar svg {
+  width: 100px;
+  height: 100px;
+}
+
+.card__title {
+  margin-top: 45%;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.card__subtitle {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--submain-color);
+}
+
+.card__btn {
+  margin-top: 15px;
+  width: 76px;
+  height: 31px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--main-color);
+  background: var(--bg-color);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.card__btn-solid {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.card__btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.card__btn-solid:hover {
+  background: var(--bg-color);
+  color: var(--main-color);
+}
+
+.row .card {
+  margin: 20px;
+}
+
+/* FIN DE PRUEBA DE NOSOTROS  */
 
 
 
