@@ -268,39 +268,6 @@ body {
     transform: translateX(100%);
 }
 
-/* Media Queries para que el slider sea responsive */
-@media (max-width: 768px) {
-    .logo-slider-container {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .category-buttons button {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    .logo-slider img {
-        width: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-slider-container {
-        width: 100%;
-        padding: 5px;
-    }
-
-    .category-buttons button {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-
-    .logo-slider img {
-        width: 50px;
-    }
-}
-
 /* Fin de slider de marcas */
 /* Fin de presentación de página / marcas */
 
@@ -341,7 +308,7 @@ body {
     width: auto; /* Usar porcentaje para que se adapte */
     max-width: 27rem; /* Mantiene un límite máximo */
     padding: 8px 12px 5px;
-    margin: -20rem 0; /* Espaciado arriba y abajo */
+    margin: -22rem 0; /* Espaciado arriba y abajo */
 }
 
 /* Fin de aliados */
@@ -588,16 +555,6 @@ body {
 
     width: 100%;
   }
-  .tituloContacto{
-    font-weight: 600;
-    font-size: 3.5rem;
-    margin-top: 4%;
-    margin-bottom: 40px;
-    color:#d84539;
-    font-family: bold;
-    display: flex;
-    justify-content: center;
-  }
 
   /* iconos redes sociales footer */
   /*Footer fin  */
@@ -820,6 +777,138 @@ body {
 
 /* inicio contactanos */
 #contactanos{
-background-color: #ffffff;
+  background-color: #ffffff;
+  height: 42rem;
+  }
+
+  /* inicio de cartas  */
+.contactos{
+  display: flex;
+  justify-content: flex-start;
 }
-/* fin de contactanos */
+.tituloContacto{
+  font-weight: 600;
+  font-size: 5rem;
+  margin-top: 4%;
+  margin-bottom: 40px;
+  color:#d84539;
+  font-family: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  cursor: pointer;
+  width: 40rem;
+  height: 20rem;
+  margin: 80px;
+  background: #0b1f43;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 255, .2);
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
+ }
+
+ .card:hover {
+  box-shadow: -12px 12px 2px -1px #ffffff33;
+ }
+ .iconosContacto{
+  display: flex;
+  justify-content: center;
+ }
+ .SubContactos{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin: 10% auto; /* Centramos y ajustamos */
+  z-index: 10;
+  text-align: center; 
+
+ }
+#SubContacto{
+  color:#ffffff;
+  font-family: bold;
+  font-size: 3rem; 
+
+}
+ #iconoEMail{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+ #iconoLlamada{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+ #iconoUbicacion{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+/* segunda carta de contactos  */
+.redesSociales{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -30rem;
+}
+ .cardDos{
+  cursor: pointer;
+  width: 40rem;
+  height: 20rem;
+  margin: 80px;
+  background: #0b1f43;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 255, .2);
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
+ }
+ .cardDos:hover {
+  box-shadow: -12px 12px 2px -1px #ffffff33;
+ }
+ .iconosRedes{
+  display: flex;
+  justify-content: center;
+ }
+ .tituloRedes{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin: 10% auto; /* Centramos y ajustamos */
+  z-index: 10;
+  text-align: center; 
+ }
+ #titulosRedes{
+  color:#ffffff;
+  font-family: bold;
+  font-size: 3rem; 
+ }
+ #iconoFacebook{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+ #iconoWhatsapp{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+ #iconoInstagram{
+  height: 100%;
+  width: auto;
+  padding: 25px 20px 10px;
+  font-size: 3rem;
+  color: #ffbe33;
+ }
+ /* fin de contactanos */
