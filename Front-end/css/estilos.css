@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: "Kanit", sans-serif;
     background-color: #f4f4f9;
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ body {
 
 /* Logo */
 .logoUni {
-    width: 20rem;
+    width: 38rem;
     height: 6rem;
     display: flex;
     align-items: center;
@@ -124,7 +124,7 @@ body {
     font-weight: 600;
     margin: 4% auto; /* Centramos y ajustamos */
     color: #ffffff;
-    font-family: bold;
+    font-family: "Kanit", sans-serif;
     z-index: 10;
     font-size: 3.5rem; 
     text-align: center; 
@@ -281,7 +281,7 @@ body {
     font-weight: 600;
     margin: 4% auto 40px; /* Centramos y ajustamos */
     color: #d84539;
-    font-family: bold;
+    font-family: "Kanit", sans-serif;
     display: flex;
     font-size: 3.5rem;
     justify-content: center;
@@ -292,7 +292,7 @@ body {
     width: 68%; /* Mantener un porcentaje para que se ajuste */
     display: flex;
     justify-content: flex-start;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Kanit", sans-serif;
     font-size: 26px;
     padding: 15px 3px 5px;
 }
@@ -326,7 +326,7 @@ body {
   border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -437,7 +437,7 @@ body {
   margin-top: 2%;
   margin-bottom: 40px;
   color:#f0c23b;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   display: flex;
   justify-content: center;
 }
@@ -461,7 +461,7 @@ body {
   .footer_section .footer-logo {
     font-weight: 600;
     margin-bottom: 20px;
-    font-family:bold;
+    font-family: "Kanit", sans-serif;
   }
   
   .footer_section p {
@@ -573,7 +573,7 @@ body {
   border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -643,7 +643,7 @@ body {
   height: 120px;
   width: 100%;
   padding-top: 40px;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   justify-content: center;
 }
 
@@ -788,11 +788,11 @@ body {
 }
 .tituloContacto{
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 4rem;
   margin-top: 4%;
   margin-bottom: 40px;
   color:#d84539;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   display: flex;
   justify-content: center;
 }
@@ -803,7 +803,7 @@ body {
   height: 20rem;
   margin: 80px;
   background: #0b1f43;
-  border-radius: 5px;
+  border-radius: 30px;
   border: 1px solid rgba(0, 0, 255, .2);
   transition: all .2s;
   box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
@@ -815,6 +815,8 @@ body {
  .iconosContacto{
   display: flex;
   justify-content: center;
+  position: relative;
+  top: -16%;
  }
  .SubContactos{
   display: flex;
@@ -827,7 +829,7 @@ body {
  }
 #SubContacto{
   color:#ffffff;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   font-size: 3rem; 
 
 }
@@ -835,21 +837,21 @@ body {
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
  #iconoLlamada{
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
  #iconoUbicacion{
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
 /* segunda carta de contactos  */
@@ -865,7 +867,7 @@ body {
   height: 20rem;
   margin: 80px;
   background: #0b1f43;
-  border-radius: 5px;
+  border-radius: 30px;
   border: 1px solid rgba(0, 0, 255, .2);
   transition: all .2s;
   box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
@@ -876,6 +878,8 @@ body {
  .iconosRedes{
   display: flex;
   justify-content: center;
+  position: relative;
+  top: -16%;
  }
  .tituloRedes{
   display: flex;
@@ -887,28 +891,28 @@ body {
  }
  #titulosRedes{
   color:#ffffff;
-  font-family: bold;
+  font-family: "Kanit", sans-serif;
   font-size: 3rem; 
  }
  #iconoFacebook{
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
  #iconoWhatsapp{
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
  #iconoInstagram{
   height: 100%;
   width: auto;
   padding: 25px 20px 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffbe33;
  }
  /* fin de contactanos */
