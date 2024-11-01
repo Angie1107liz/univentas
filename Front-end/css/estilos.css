@@ -34,7 +34,7 @@ body {
 /* Estilos de los enlaces */
 .nav-link {
     color: #2c4389;
-    font-size: 1.5rem; /* Cambiamos a rem para la responsividad */
+    font-size: 1rem; /* Cambiamos a rem para la responsividad */
     font-weight: bold;
     text-decoration: none;
     padding: 9px 12px;
@@ -85,7 +85,7 @@ body {
 
 /* Logo */
 .logoUni {
-    width: 38rem;
+    width: 30rem;
     height: 6rem;
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ body {
 
 /* Presentación de página / marcas */
 #home {
-    background-color: #0b1f44;
+  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
 }
 
 .primerTitulo {
@@ -428,7 +428,7 @@ body {
   transform: translate(-50%, -130%);
 }
 #nosotros{
-  background-color: #0b1f44;
+  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
   height: 30rem;
 }
 .tituloNosotros{
@@ -447,7 +447,7 @@ body {
 /* Footer inicio */
 /* footer section*/
 .footer_section {
-    background-color: #0b1f44;
+  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
     color: #ffbe33;
     padding: 75px 0 40px 0;
     text-align: center;
@@ -730,10 +730,10 @@ body {
 .owl-carousel {
   display: flex;
   justify-content: center;
-  margin: 3rem auto; /* Cambiado a auto para centrar */
+  padding: 12px 85px 7px;
+  margin: 5px 14rem;
   height: auto; /* Cambiado a auto para mejor adaptabilidad */
   width: 100%; /* Cambiar a 100% para ajustarse a su contenedor */
-  margin-left: 16%;
   max-width: 77rem; /* Mantener un ancho máximo */
 }
 
