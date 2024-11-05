@@ -1,5 +1,5 @@
 //se almacena la url de la api
-let urlUsuario="http://127.0.0.1:8000/libreria/api/v1/usuario/";
+let urlUsuario="http://127.0.0.1:8000/univentas/api/v1/usuario/";
 function listarUsuario() {
     var busqueda = document.getElementById("buscar").value;
     var urlBusqueda = urlUsuario;
@@ -17,10 +17,10 @@ function listarUsuario() {
                //se crea una etiqueta tr por cada registro
                 let trRegistro = document.createElement("tr");//fila por cada registro de la tabla
                 let celdaId = document.createElement("td");
-                let celdanombreUsuario = document.createElement("td");
-                let celdaDireccionResidencia = document.createElement("td");
                 let celdaCorreo = document.createElement("td");
-                let celdaTipo_Usuario = document.createElement("td");
+                let celdaNit = document.createElement("td");
+                let celdaPassword= document.createElement("td");
+                let celdaNumeroDocumento=document.createElement("td")
                 // let celdaEstado = document.createElement("td");
 
                 // let celdaEditar = document.createElement("td");
