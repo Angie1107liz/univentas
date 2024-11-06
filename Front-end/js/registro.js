@@ -1,5 +1,5 @@
 //se almacena la url de la api
-let urlUsuario="http://127.0.0.1:8000/univentas/api/v1/usuario/";
+let urlUsuario="http://127.0.0.1:8000/univentas/api/v1/usuario";
 function listarUsuario() {
     var busqueda = document.getElementById("buscar").value;
     var urlBusqueda = urlUsuario;
@@ -21,6 +21,7 @@ function listarUsuario() {
                 let celdaNit = document.createElement("td");
                 let celdaPassword= document.createElement("td");
                 let celdaNumeroDocumento=document.createElement("td")
+                let celdaTipo_documento=document.createElement("td")
                 // let celdaEstado = document.createElement("td");
 
                 // let celdaEditar = document.createElement("td");
@@ -28,19 +29,21 @@ function listarUsuario() {
                 //almacenamos en valor
                 
                 celdaId.innerText = result[i]["id"];
-                celdanombreUsuario.innerText= result[i]["nombreUsuario"];
-                celdaDireccionResidencia.innerText = result[i]["direccionResidencia"];
-                celdaCorreo.innerText = result[i]["correo"];
-                celdaTipo_Usuario.innerText = result[i]["tipoUsuario"];
+                celdaCorreo.innerText= result[i]["correo"];
+                celdaNit.innerText = result[i]["nit"];
+                celdaPassword.innerText = result[i]["password"];
+                celdaTipo_documento.innerText = result[i]["tipoDocumento"];
+                celdaNumeroDocumento.innerText = result[i]["numeroDocumento"]
     
                 
                 //agregando a los td a su respectivo th y agregandolos a la fila
 
                 trRegistro.appendChild(celdaId);
-                trRegistro.appendChild(celdanombreUsuario);
-                trRegistro.appendChild(celdaDireccionResidencia);
                 trRegistro.appendChild(celdaCorreo);
-                trRegistro.appendChild(celdaTipo_Usuario);
+                trRegistro.appendChild(celdaNit);
+                trRegistro.appendChild(celdaNumeroDocumento);
+                trRegistro.appendChild(celdaPassword);
+                trRegistro.appendChild(celdaTipo_documento);
                 
                 //boton editar 
                 let celdaOpcion= document.createElement("td");
@@ -85,17 +88,19 @@ function listarUsuario() {
 //Paso para crear el registro de un cliente ****
 function registrarUsuario() {
     
-    let nombreUsuario = document.getElementById("nombreUsuario").value;
-    let direccionResidencia =document.getElementById("direccionResidencia").value;
     let correo = document.getElementById("correo").value;
-    let tipoUsuario = document.getElementById("tipoUsuario").value;
+    let nit =document.getElementById("nit").value;
+    let password = document.getElementById("password").value;
+    let tipoDocumento = document.getElementById("tipoDocumento").value;
+    let numeroDocumento= document.getElementById("numeroDocumento").value;
 
     let formData = {
         
-        "nombreUsuario": nombreUsuario,
-        "direccionResidencia": direccionResidencia,
         "correo": correo,
-        "tipoUsuario": tipoUsuario
+        "nit": nit,
+        "password": password,
+        "numeroDocumento": numeroDocumento,
+        "tipoDocumento": tipoDocumento,
     };
 
     if(validarCampos()){
@@ -129,45 +134,19 @@ function registrarUsuario() {
 
 //Paso para que el usuario se registre y llene todos los datos correctamente :D****
 function validarCampos() {
-    var nombreUsuario = document.getElementById("nombreUsuario");
-    var direccionResidencia = document.getElementById("direccionResidencia"); 
-    var correo = document.getElementById("correo"); 
-    var tipoUsuario = document.getElementById("tipoUsuario"); 
+    var correo = document.getElementById("correo");
+    var nit = document.getElementById("nit"); 
+    var password = document.getElementById("password"); 
+    var numeroDocumento = document.getElementById("numeroDocumento"); 
      
 
-    return validarNombre(nombreUsuario) && validarDireccion(direccionResidencia) 
-         && validarCorreo(correo) ;
+    return validarCorreo(correo) && validarNit(nit) 
+         && validarPassword(password)
+         && validarNumeroDocumento(numeroDocumento) ;
 }
 
-function validarNombre(campo){
-    var valido=true;
-    if(campo.value.length < 3 || campo.value.length > 60){
-        valido=false;
-    }
 
-    if (valido) {
-        campo.className = "form-control is-valid"
-    }
-    else{
-        campo.className = "form-control is-invalid"
-    }
-    return valido;
-}
 
-function validarDireccion(direccionResidencia){
-    let valor = direccionResidencia.value;
-    let valido = true;
-    if (valor.length <=0 || valor.length >50) {
-        valido = false
-    }
-    if (valido) {
-        direccionResidencia.className = "form-control is-valid"
-    }
-    else{
-        direccionResidencia.className = "form-control is-invalid"
-    }
-    return valido;
-}
 
 function validarCorreo(Correo){
     let valor = Correo.value;
@@ -184,15 +163,62 @@ function validarCorreo(Correo){
     return valido;
 }
 
+function validarNit(nit){
+    let valor = nit.value;
+    let valido = true;
+    if (valor.length <=0 || valor.length >10) {
+        valido = false
+    }
+    if (valido) {
+        nit.className = "form-control is-valid"
+    }
+    else{
+        nit.className = "form-control is-invalid"
+    }
+    return valido;
+}
+function validarPassword(password){
+    let password = password.value;
+    let valido = true;
+    if (valor.length <=0 || valor.length >10) {
+        valido = false
+    }
+    if (valido) {
+        password.className = "form-control is-valid"
+    }
+    else{
+        password.className = "form-control is-invalid"
+    }
+    return valido;
+}
+function validarPassword(password){
+    let password = password.value;
+    let valido = true;
+    if (valor.length <=0 || valor.length >10) {
+        valido = false
+    }
+    if (valido) {
+        password.className = "form-control is-valid"
+    }
+    else{
+        password.className = "form-control is-invalid"
+    }
+    return valido;
+}
+
+
+
+
 //Cuando le damos click al boton de guardar, este llamara a la function Update por medio del onclick******
 function updateUsuario() {
     var id = document.getElementById("id").value;
 
     let formData = {
-        "nombreUsuario": document.getElementById("nombreUsuario").value,
-        "direccionResidencia": document.getElementById("direccionResidencia").value,
         "correo": document.getElementById("correo").value,
-        "tipoUsuario": document.getElementById("tipoUsuario").value,
+        "nit": document.getElementById("nit").value,
+        "password": document.getElementById("password").value,
+        "numeroDocumento": document.getElementById("numeroDocumento").value,
+        "tipoDocumento": document.getElementById("tipoDocumento").value,
        
     };
 
@@ -239,27 +265,30 @@ function consultarUsuarioID(id){
         success: function(result){
             
             document.getElementById("id").value=result["id"];
-            document.getElementById("nombreUsuario").value=result["nombreUsuario"];
-            document.getElementById("direccionResidencia").value=result["direccionResidencia"];
             document.getElementById("correo").value=result["correo"];
-            document.getElementById("tipoUsuario").value=result["tipoUsuario"];
+            document.getElementById("nit").value=result["nit"];
+            document.getElementById("password").value=result["password"];
+            document.getElementById("tipoDocumento").value=result["tipoDocumento"]
+            document.getElementById("numeroDocumento").value=result["numeroDocumento"];
         }
     });
 }
 function limpiar(){
 
     // document.getElementById("id").className="form-control";
-    document.getElementById("nombreUsuario").className="form-control";
-    document.getElementById("direccionResidencia").className="form-control";
     document.getElementById("correo").className="form-control";
-    document.getElementById("tipoUsuario").className="form-control";
+    document.getElementById("nit").className="form-control";
+    document.getElementById("password").className="form-control"
+    document.getElementById("numeroDocumento").className="form-control";
+    document.getElementById("tipoDocumento").className="form-control";
 
 
     // document.getElementById("tipo_Identificacion").value = "";
-    document.getElementById("nombreUsuario").value = "";
-    document.getElementById("direccionResidencia").value = "";
-    document.getElementById("correo").value = "";
-    document.getElementById("tipoUsuario").value = "";
+    document.getElementById("correo").value="";
+    document.getElementById("nit").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("numeroDocumento").value = "";
+    document.getElementById("tipoDocumento").value = "";
    
 }
 

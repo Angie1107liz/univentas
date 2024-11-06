@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+ body{
+
+    background-image: url('/Front-end/img/fondoBodyLogin.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+    box-sizing: border-box;
+    font-family: bold;
+    font-family: bold;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color);
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+ }
+
+ /* login */
+ :root {
+    --background: #030745;
+    --color: #dbcdcd;
+    --primary-color: #070749;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ .login-containerRegistro{
+    position: relative;
+    width: 30.2rem;
+    height: 20.2rem;
+}
+.form-containerRegistro{
+    background-color: #0b1f43;
+    border: 1px solid hsla(0, 5%, 62%, 0.578);
+    box-shadow: 0 0 36px 1px rgba(131, 123, 123, 0.599);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: 3rem;
+    position: relative;
+    top: -8rem;
+    height: 35rem;
+    width: 33rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.login-containerRegistro  form input {
+    display: block;
+    padding: 14.5px;
+    width: 100%;
+    margin: 2rem 0;
+    color: var(--color);
+    outline: none;
+    background-color: #403a3a75;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    backdrop-filter: blur(15px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.login-containerRegistro form button {
+    background-color:#f0c23b;
+    color: #ece1e1;
+    display: block;
+    padding: 13px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.1s ease-in-out;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+.illustration {
+    position: absolute;
+    top: -14%;
+    right: -2px;
+    width: 90%;
+}
+
+
+.register-forget {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+.opacity {
+    display: flex;
+    justify-content: center;
+    opacity: 1.6;
+    color: #ffffff;
+
+}
+.opacityDos{
+    display: flex;
+    justify-content: center;
+    opacity: 1.6;
+    font-size: 1rem;
+    color: #f0c23b;
+}
+.opacityTres{
+
+    display: flex;
+    justify-content: center;
+    opacity: 1.6;
+    font-size:75%;
+    color: #eaeaea;
+}
+
+.theme-btn-container {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+}
+
+.theme-btn {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.theme-btn:hover {
+    width: 40px !important;
+}
+
+@keyframes wobble {
+    0% {
+        transform: scale(1.025);
+        -webkit-transform: scale(1.025);
+        -moz-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+        -o-transform: scale(1.025);
+    }
+    25% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    75% {
+        transform: scale(1.025);
+        -webkit-transform: scale(1.025);
+        -moz-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+        -o-transform: scale(1.025);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.titulos{
+    position: absolute;
+    font-weight: 600;
+    margin: 4% auto;
+    color: #0b1f43;
+    font-family: bold;
+    z-index: 10;
+    font-size: 4.5rem;
+    text-align: center;
+    display: flex;
+    position: relative;
+    top: -10rem;
+}      
+.selectDocumento{
+    display: block;
+    padding: 14.5px;
+    width: 100%;
+    margin: 2rem 0;
+    color: #6d6d6d;
+    outline: none;
+    background-color: #403a3a75;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    backdrop-filter: blur(15px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+}
