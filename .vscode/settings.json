@@ -1,4 +1,7 @@
 {
-    "liveServer.settings.port": 5501,
-    "livePreview.defaultPreviewPath": "/Front-end/paginaAterrizaje/Index.html"
+    "liveServer.settings.port": 8080,
+    "livePreview.defaultPreviewPath": "/Front-end/paginaAterrizaje/Index.html",
+    "liveServer.settings.multiRootWorkspaceName": "univentas",
+    "liveServer.settings.useBrowserPreview": true
+
 }
