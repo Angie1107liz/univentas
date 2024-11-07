@@ -66,6 +66,7 @@ h1 {
     backdrop-filter: blur(20px);
     z-index: 99;
     padding: 2rem;
+    width: 30rem;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
