@@ -17,18 +17,19 @@ body {
 
 /* Barra de navegación */
 .navbar {    
-    position: relative;
-    z-index: 2;
-    height: 7rem;
-    background-color: #ffffffe8;
-    border-radius: 10px 175px;
-    padding: 0% 3%; /* Usar porcentajes para mejor adaptación */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    transition: all 0.3s ease;
-    flex-wrap: wrap;
+  position: fixed;
+  z-index: 1000;
+  height: 7rem;
+  width: 94.5rem;
+  background-color: #ededed;
+  border-radius: 10px 175px;
+  padding: 0% 3%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
 }
 
 /* Estilos de los enlaces */
@@ -273,10 +274,10 @@ body {
 
 /* Inicio de aliados */
 #aliados{
-  height: 30rem;
-  background-color: #ffffff;
-
+  height: 38rem;
+  background-color: #ededed;
 }
+
 .titulos {
     font-weight: 600;
     margin: 4% auto 40px; /* Centramos y ajustamos */
@@ -288,27 +289,55 @@ body {
 } 
 
 .textoAliado { 
-    height: 19rem; /* Cambiado a auto para mejor responsividad */
-    width: 68%; /* Mantener un porcentaje para que se ajuste */
-    display: flex;
-    justify-content: flex-start;
-    font-family: "Kanit", sans-serif;
-    font-size: 26px;
-    padding: 15px 3px 5px;
+  height: 11rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Kanit", sans-serif;
+  font-size: 23px;
+  padding: 15px 3px 5px;
+  position: relative;
+  top: 3rem;
+}
+.gifAlianza{
+display: flex;
+justify-content: center;
+}
+#gifAlianza{
+  width: 26rem;
+  height: 16rem;
+
 }
 
 .imagenesAliados {
     display: flex;
     justify-content: flex-end;
     font-size: 22px;
-}
+    position: relative;
+    top: 3rem;
+  }
 
 #imgUnilever {
     height: 18rem; /* Cambiado a auto para mejor responsividad */
-    width: auto; /* Usar porcentaje para que se adapte */
+    width: 20rem; /* Usar porcentaje para que se adapte */
     max-width: 27rem; /* Mantiene un límite máximo */
     padding: 8px 12px 5px;
-    margin: -22rem 0; /* Espaciado arriba y abajo */
+    margin: -18rem 7rem; /* Espaciado arriba y abajo */
+}
+.aliadosUniasociados{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 22px;
+  position: relative;
+  top: 17rem;
+  
+}
+#aliadosUniasociados{
+  height: 18rem; /* Cambiado a auto para mejor responsividad */
+  width: 20rem; /* Usar porcentaje para que se adapte */
+  max-width: 27rem; /* Mantiene un límite máximo */
+  padding: 8px 12px 5px;
+  margin: -16rem 7rem; /* Espaciado arriba y abajo */
 }
 
 /* Fin de aliados */
@@ -775,20 +804,25 @@ body {
 
 /* FIN DE PRUEBA DE NOSOTROS  */
 
-/* inicio contactanos */
+/* INICIO CONTACTOS */
 #contactanos{
   background-color: #ffffff;
   height: 42rem;
   }
 
   /* inicio de cartas  */
-.contactos{
+.contactosMapa{
   display: flex;
+  height: 60%;
+  width: 40%;
   justify-content: flex-start;
+  margin: 33px;
+  position: relative;
+  top: 3%;
 }
 .tituloContacto{
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-top: 4%;
   margin-bottom: 40px;
   color:#d84539;
@@ -796,123 +830,255 @@ body {
   display: flex;
   justify-content: center;
 }
-
-.card {
-  cursor: pointer;
-  width: 40rem;
-  height: 20rem;
-  margin: 80px;
-  background: #0b1f43;
-  border-radius: 30px;
-  border: 1px solid rgba(0, 0, 255, .2);
-  transition: all .2s;
-  box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
- }
-
- .card:hover {
-  box-shadow: -12px 12px 2px -1px #ffffff33;
- }
- .iconosContacto{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -16%;
- }
- .SubContactos{
-  display: flex;
-  justify-content: center;
-  font-weight: 600;
-  margin: 10% auto; /* Centramos y ajustamos */
-  z-index: 10;
-  text-align: center; 
-
- }
-#SubContacto{
-  color:#ffffff;
+.card{
+  background-color: #eeeeecc0;
+  color: #631414;
+  border: 1px solid #8f8d8d4a;
   font-family: "Kanit", sans-serif;
-  font-size: 3rem; 
+  width: 20%;
+  height: 10%;
+  border-radius: 3px;
+  position: relative;
+  left: 50%;
+  top: -55%;
+  
+}
+.card:hover {
+  transform: scale(1.1) rotate(5deg); /* Escalado y ligera rotación */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #007bff;
+  border-radius: 15px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+
+/* Estilos del botón */
+.card .boton-tarjeta {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #007bff;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto del botón al pasar el cursor */
+.card .boton-tarjeta:hover {
+  background: #007bff;
+  color: #ffffff;
+  transform: translateY(-5px); /* Elevación del botón */
+}
+#telefono{
+  font-size:2rem;
+  color: #f0c23b;
+  padding: 0px 17px 18px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición para animaciones suaves */
 
 }
- #iconoEMail{
-  height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
- #iconoLlamada{
-  height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
- #iconoUbicacion{
-  height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
-/* segunda carta de contactos  */
-.redesSociales{
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  top: -30rem;
+#telefono:hover {
+  transform: scale(1.3) rotate(20deg); /* Escala el ícono y lo rota */
+  color: #da4236;                      /* Cambia el color del ícono */
 }
- .cardDos{
-  cursor: pointer;
-  width: 40rem;
-  height: 20rem;
-  margin: 80px;
-  background: #0b1f43;
-  border-radius: 30px;
-  border: 1px solid rgba(0, 0, 255, .2);
-  transition: all .2s;
-  box-shadow: 12px 12px 2px 1px rgba(254, 254, 255, 0.559);
- }
- .cardDos:hover {
-  box-shadow: -12px 12px 2px -1px #ffffff33;
- }
- .iconosRedes{
+#texto{
+  font-size: 44%;
+  font-size: 110%;
+  color: #010c47;
+  padding: 13px 5px 0px 7px;
+  margin: 4px;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -16%;
- }
- .tituloRedes{
-  display: flex;
-  justify-content: center;
-  font-weight: 600;
-  margin: 10% auto; /* Centramos y ajustamos */
-  z-index: 10;
-  text-align: center; 
- }
- #titulosRedes{
-  color:#ffffff;
+
+}
+/* fin de la primer tarjeta */
+/* inicio de segunda tarjeta */
+
+.cardCorreo{
+  background-color: #eeeeecc0;
+  color: #631414;
+  border: 1px solid #8f8d8d4a;
   font-family: "Kanit", sans-serif;
-  font-size: 3rem; 
- }
- #iconoFacebook{
+  width: 20%;
+  height: 10%;
+  border-radius: 3px;
+  position: relative;
+  left: 75%;
+  top: -65%;
+}
+.cardCorreo:hover {
+  transform: scale(1.1) rotate(5deg); /* Escalado y ligera rotación */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+.cardCorreo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
- #iconoWhatsapp{
+  background: #007bff;
+  border-radius: 15px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+
+/* Estilos del botón */
+.cardCorreo .boton-tarjeta {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #007bff;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto del botón al pasar el cursor */
+.cardCorreo .boton-tarjeta:hover {
+  background: #007bff;
+  color: #ffffff;
+  transform: translateY(-5px); /* Elevación del botón */
+}
+#IconoCorreo{
+  font-size:2rem;
+  color: #f0c23b;
+  padding: 0px 17px 18px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición para animaciones suaves */
+
+}
+#IconoCorreo:hover {
+  transform: scale(1.3) rotate(20deg); /* Escala el ícono y lo rota */
+  color: #da4236;                      /* Cambia el color del ícono */
+}
+#textoCorreo{
+  font-size: 88%;
+  color: #010c47;
+  padding: 13px 13px 0px 7px;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+
+}
+/* fin de la segunda tarjeta */
+/* inicio de la tercer tarjeta */
+.cardRedes{
+  background-color: #eeeeecc0;
+  color: #631414;
+  border: 1px solid #8f8d8d4a;
+  font-family: "Kanit", sans-serif;
+  width: 30%;
+  height: 10%;
+  border-radius: 3px;
+  position: relative;
+  left: 58%;
+  top: -56%;
+}
+.cardRedes:hover {
+  transform: scale(1.1) rotate(5deg); /* Escalado y ligera rotación */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+.cardRedes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
- #iconoInstagram{
-  height: 100%;
-  width: auto;
-  padding: 25px 20px 10px;
-  font-size: 4rem;
-  color: #ffbe33;
- }
- /* fin de contactanos */
+  background: #007bff;
+  border-radius: 15px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+
+/* Estilos del botón */
+.cardRedes .boton-tarjeta {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #007bff;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto del botón al pasar el cursor */
+.cardRedes .boton-tarjeta:hover {
+  background: #007bff;
+  color: #ffffff;
+  transform: translateY(-5px); /* Elevación del botón */
+}
+.contenedor-horizontal {
+  display: flex;
+  justify-content: center; /* Espaciado entre los elementos */
+  margin: 16px;
+  align-items: center; /* Centrar los elementos verticalmente */
+  gap: 20px; /* Espacio entre los elementos */
+}
+#iconoFacebook{
+  font-size:2rem;
+  color: #f0c23b;
+  padding: 0px 17px 18px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición para animaciones suaves */
+
+}
+#iconoFacebook:hover {
+  transform: scale(1.3) rotate(20deg); /* Escala el ícono y lo rota */
+  color: #da4236;                      /* Cambia el color del ícono */
+}
+#iconoWhatsapp{
+  font-size:2rem;
+  color: #f0c23b;
+  padding: 0px 17px 18px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición para animaciones suaves */
+
+}
+#iconoWhatsapp:hover {
+  transform: scale(1.3) rotate(20deg); /* Escala el ícono y lo rota */
+  color: #da4236;                      /* Cambia el color del ícono */
+}
+
+#iconoInstagram{
+  font-size:2rem;
+  color: #f0c23b;
+  padding: 0px 17px 18px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición para animaciones suaves */
+
+}
+#iconoInstagram:hover {
+  transform: scale(1.3) rotate(20deg); /* Escala el ícono y lo rota */
+  color: #da4236;                      /* Cambia el color del ícono */
+}
+
+
+
+/* fin de la tercer tarjeta */

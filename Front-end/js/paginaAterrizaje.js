@@ -106,3 +106,8 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 });  
+
+function marcarNumero(numero) {
+  // Aquí puedes realizar la acción de marcar el número, por ejemplo, redirigir a una URL tel: con el número deseado
+  window.location.href = 'tel:' + numero;
+}
