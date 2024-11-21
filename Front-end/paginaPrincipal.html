@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Univentas - Página Principal</title>
+
+    <!-- Enlaces a CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- INICIO BARRA NAVEGACION LATERAL -->
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <div class="menu">
+            <div class="menu-item">
+                <a  href="./paginaPrincipal.html" class="icon"><i class="fa-solid fa-house"></i></a>
+                <a href="" class="text" style="color: #ffffff;">Inicio</a>
+            </div>
+            <div class="menu-item">
+                <a href="./catalogo.html" href="./catalogo.html" class="icon"><i class="fa-solid fa-file-lines"></i></a>
+                <a href="./catalogo.html" class="text" style="color: #ffffff;">Catálogo</a>
+            </div>
+            <div class="menu-item">
+                <a href="./vendedores.html" class="icon"><i class="fa-solid fa-user-tie"></i></a>
+                <a href="./vendedores.html" class="text" style="color: #ffffff;">Vendedores</a>
+            </div>
+            <div class="menu-item">
+                <a href="./ciclos.html" class="icon"><i class="fa-solid fa-arrows-rotate"></i></a>
+                <a href="./ciclos.html" class="text" style="color: #ffffff;">Ciclos</a>
+            </div>
+            <div class="menu-item">
+                <a href="./ajustes.html" class="icon"><i class="fa-solid fa-gear"></i></a>
+                <a href="./ajustes.html" class="text" style="color: #ffffff;">Ajustes</a>
+            </div>
+        </div>
+    </div>
+    <!-- FIN BARRA NAVEGACION LATERAL -->
+
+    <!-- INICIO  BARRA NAVEGACION SUPERIOR -->
+    <nav class="navbar">
+
+        <div class="menu-toggle" id="mobile-menu">  
+        </div>
+       <div class="logo">
+            <img src="./img/logoUniasociadoInverso.png" id="logoNavSuperior" alt="">
+        </div>
+    </nav>
+
+    <!-- FIN BARRA NAVEGACION SUPERIOR -->
+
+    <!-- INICIO CONTENIDO DE LA PAGINA -->
+    <div class="page-content">
+        <div class="container">
+            <section class="welcome-section">
+                <h2>¡Bienvenido a Univentas!</h2>
+                <p>Somos una empresa dedicada a ofrecer productos de alta calidad, con un servicio rápido, eficiente y personalizado. Nos enorgullecemos de ser su proveedor de confianza.</p>
+            </section>
+
+            <section class="highlights">
+                <h3>Nuestros valores:</h3>
+                <ul class="value-list">
+                    <li>✅ Productos de alta calidad</li>
+                    <li>✅ Servicio rápido y eficiente</li>
+                    <li>✅ Atención personalizada</li>
+                    <a class="cta-button" href="./catalogo.html">
+                        <i class="fa-regular fa-eye"></i>  Explorar Productos
+                    </a>
+                </ul>
+                <img src="./img/camionDistribuidora.png" id="camionUniventas" alt="">
+
+      
+            </section>
+            
+        </div>
+    </div>
+    <!-- FIN CONTENIDO DE LA PAGINA -->
+
+    <!-- INICIO DEL FOOTER -->
+    <footer class="footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </footer>
+      
+    <!-- FIN DEL FOOTER -->
+
+    <!-- INICIO DE JAVASCRIPT -->
+    <script src="./js/paginaPrincipal.js"></script>
+    <!-- FIN DE JAVASCRIPT-->
+
+</body>
+</html>

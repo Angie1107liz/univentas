@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Kanit", sans-serif;
+    font-family: "Kanit", sans-serif;
     background-color: #f4f4f9;
     display: flex;
     flex-direction: column;

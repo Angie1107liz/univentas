@@ -1,109 +1,137 @@
-/* Estilos básicos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+
+
+/* INCIO CONTENIDO PAGINA */
+
+/* Estilo para el selector */
+.filter-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
-body {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+#category-selector {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background: center;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #ffffff ;
-    color: #ffffff;
-    border: 2px solid #949396c6; /* Cambia el color (#3498db) por el que prefieras */
-    transition: left 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+/* Efectos hover en las tarjetas */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: center;
 }
 
-.sidebar.open {
-    left: 0;
+/* Contenedor general de las tarjetas */
+.card-container {
+  display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding:10px;
 }
 
-.sidebar .logo img {
-    width: 50px;
-    margin-bottom: 20px;
+/* Estilo general para cada tarjeta */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.sidebar .search input {
-    width: 80%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 20px;
+/* Imagen de la tarjeta */
+.card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
-.sidebar nav ul {
-    list-style-type: none;
-    width: 100%;
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.sidebar nav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
+/* Efecto de zoom al pasar el cursor sobre la imagen */
+.card:hover .card-img img {
+  transform: scale(1.1);
 }
 
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: #07175f;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s;
+/* Contenido dentro de la tarjeta */
+.card-content {
+  padding: 20px;
+  text-align: center;
 }
 
-.sidebar nav ul li a:hover {
-    background-color: #07175f;
-    color: #ffffff;
-    border-radius: 3px;
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.sidebar .social {
-    margin-top: auto;
-    margin-bottom: 20px;
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.sidebar .social a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-    font-size: 20px;
+/* Pie de la tarjeta */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #07175f;
+/* Precio */
+.card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007BFF;
 }
 
-/* Responsive */
+/* Botón */
+.card-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.card-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animación de la tarjeta al pasar el cursor */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para hacer la tarjeta responsiva */
 @media (max-width: 768px) {
-    .menu-btn {
-        font-size: 20px;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    .sidebar .search input {
-        width: 90%;
-    }
+  .card {
+      width: 45%;
+  }
 }
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%;
+  }
+}
+
+
+/* FIN CONTENIDO PAGINA */
+
+
