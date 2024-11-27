@@ -132,7 +132,7 @@ body {
 #marcas {
   background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
   width: 100%;
-  height: 100vh;
+  height: 105vh;
 }
 
 .textoTituloMarca{
@@ -277,7 +277,8 @@ body {
 
 /* INICIO ALIADOS */
 #aliados{
-  height: 38rem;
+  width: 100%;
+  height: 100vh;
   background-color: #ededed;
 }
 
@@ -351,40 +352,43 @@ justify-content: center;
 /* FIN ALIADOS */
 
 /* INICIO NOSOTROS */
-#nosotros{
-  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
-  height: 30rem;
+#nosotros {
+  background-image: url('/Front-end/img/fondoDos.jpg');
+  width: 100%;
+  height: 75vh;
 }
-.tituloNosotros{
+
+.tituloNosotros {
   font-weight: 600;
   font-size: 3.5rem;
-  margin-top: 2%;
+  position: relative;
+  top: 5%;
   margin-bottom: 40px;
-  color:#ffffff ;
+  color: #ffffff;
   font-family: "Luckiest Guy", cursive;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease; /* Suavizar la transición */
+  transition: all 0.3s ease;
 }
+
 .tituloNosotros:hover {
-  color: #ffbe33 ; /* Color de texto al hacer hover */
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  color: #ffbe33;
+  transform: scale(1.1);
 }
 
 .card-client {
-  background: #2b273900;
-  width: 10rem;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background: #2a1a5b63;
+  width: 100%;
+  max-width: 13rem;
+  padding: 25px 20px;
   border: 4px solid #fff;
-  box-shadow: 0 1px 3px #212121;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
   border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
@@ -395,9 +399,9 @@ justify-content: center;
 .user-picture {
   overflow: hidden;
   object-fit: cover;
-  width: 5rem;
-  height: 5rem;
-  border: 4px solid #fff;
+  width: 8rem;
+  height: 8 rem;
+  border: 4px solid #f7f7f7;
   border-radius: 999px;
   display: flex;
   justify-content: center;
@@ -405,22 +409,16 @@ justify-content: center;
   margin: auto;
 }
 
-.user-picture svg {
-  width: 2.5rem;
-  fill: currentColor;
-}
-
 .name-client {
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .name-client span {
   display: block;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .social-media:before {
@@ -448,7 +446,7 @@ justify-content: center;
   fill: currentColor;
 }
 
-/*-- Tooltip Social Media --*/
+/* Tooltip Social Media */
 .tooltip-social {
   background: #262626;
   display: block;
@@ -463,7 +461,6 @@ justify-content: center;
   pointer-events: none;
   transform: translate(-50%, -90%);
   transition: all 0.2s ease;
-  z-index: 1;
 }
 
 .tooltip-social:after {
@@ -477,198 +474,68 @@ justify-content: center;
   transform: translate(-50%, 100%);
 }
 
-.social-media a .tooltip-social:after {
-  border-top-color: #262626;
-}
-
 .social-media a:hover .tooltip-social {
   opacity: 1;
   transform: translate(-50%, -130%);
 }
 
-.card-client {
-  background: #2a1a5b63;
-  width: 100%; /* Cambiar a 100% para que se ajuste al contenedor */
-  max-width: 13rem; /* Mantener un ancho máximo */
-  padding: 25px 20px; /* Simplificar padding usando la sintaxis abreviada */
-  border: 4px solid #ffffff;
-  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  font-family: "Amaranth", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  transition: all 0.3s ease;
-}
-.user-picture {
-  overflow: hidden;
-  object-fit: cover;
-  width: 5rem;
-  height: 5rem;
-  border: 4px solid #f7f7f7;
-  border-radius: 999px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.user-picture svg {
-  width: 2.5rem;
-  fill: currentColor;
-}
-
-.name-client {
-  margin: 20px 0 0; /* Simplificar margen */
-  font-weight: 600;
-  font-size: 1.125rem; /* Cambiado a rem para la responsividad */
-}
-
-.name-client span {
-  display: block;
-  font-weight: 200;
-  font-size: 1rem; /* Cambiado a rem */
-}
-
-.social-media:before {
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 20px 0;
-  background: #ffffff;
-}
-
-.social-media a {
-  position: relative;
-  margin-right: 15px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.social-media a:last-child {
-  margin-right: 0;
-}
-
-.social-media a svg {
-  width: 1.1rem;
-  fill: currentColor;
-}
-
-
-
-/*-- Redes Sociales --*/
-/* From Uiverse.io by david-mohseni */ 
-.wrapper {
-  display: inline-flex;
-  list-style: none;
-  height: 120px;
-  width: 100%;
-  padding-top: 40px;
-  font-family: "Amaranth", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  justify-content: center;
-}
-
-.wrapper .icon {
-  position: relative;
-  background: #fff;
-  border-radius: 50%;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #fff;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #fff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877f2;
-  color: #fff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1da1f2;
-  color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #e4405f;
-  color: #fff;
-}
-
-/* fin de redes sociales */
-
-
 /* Ajustes para la galería */
 .owl-carousel {
   display: flex;
   justify-content: center;
-  padding: 12px 85px 7px;
-  margin: 5px 14rem;
-  height: auto; /* Cambiado a auto para mejor adaptabilidad */
-  width: 100%; /* Cambiar a 100% para ajustarse a su contenedor */
-  max-width: 77rem; /* Mantener un ancho máximo */
+  padding: 20px 112px 15px;
+  margin: 11px auto;
+  height: auto;
+  width: 77%;
 }
+/* INICIO DE SLIDER */
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.slider {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffbe33;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffbe33;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* FIN DE SLIDER  */
 
 /* FIN NOSOTROS */
 
 /* INICIO CONTACTOS */
 #contactanos{
   background-color: #ffffff;
-  height: 42rem;
+  width: 100%;
+  height: 100vh;
   }
+  /* Contenedor de contactos */
+.contactos {
+  display: flex;
+  justify-content: space-between; /* Distribuir mapa y tarjeta */
+  align-items: center; /* Alinear verticalmente */
+  gap: 20px; /* Espaciado entre mapa y tarjeta */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar el contenedor */
+}
   .tituloContacto{
     font-weight: 600;
     font-size: 3.5rem;
@@ -685,7 +552,7 @@ justify-content: center;
     color: #ffbe33; /* Color de texto al hacer hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
   }
-  /* inicio de cartas  */
+  /* INICIO CARTAS  */
 .contactosMapa{
   display: flex;
   height: 60%;
@@ -695,6 +562,166 @@ justify-content: center;
   position: relative;
   top: 3%;
 }
+/* FIN CARTAS */
+/* INICIO PRIMERA TARJETA */
+.card p {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+}
+
+.card p.small {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #ffbe33 ;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #ffbe33 ;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+  transform: scale(21);
+}
+
+.card1:hover p {
+  transition: all 0.3s ease-out;
+  color: #013e9b ;
+}
+
+.card1:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+/* FIN PRIMERA CARTA */
+
+/* INICIO SEGUNDA CARTA */
+.cardCorreo p {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+}
+
+.cardCorreo p.small {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #ffbe33 ;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card2 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #ffbe33 ;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card2:hover:before {
+  transform: scale(21);
+}
+
+.card2:hover p {
+  transition: all 0.3s ease-out;
+  color: #013e9b ;
+}
+
+.card2 :hover h3 {
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+/* FIN SEGUNDA CARTA */
+
+
 
 /* FIN CONTACTOS */
 

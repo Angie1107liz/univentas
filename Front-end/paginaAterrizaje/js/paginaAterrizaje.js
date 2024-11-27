@@ -80,7 +80,7 @@ function closeSlider() {
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-      items: 3,
+      items: 4,
       loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
@@ -111,3 +111,24 @@ function marcarNumero(numero) {
   // Aquí puedes realizar la acción de marcar el número, por ejemplo, redirigir a una URL tel: con el número deseado
   window.location.href = 'tel:' + numero;
 }
+// slider
+document.addEventListener('DOMContentLoaded', function() {
+  var slider = document.getElementById("myRange");  // Obtiene el slider
+  var carousel = $(".owl-carousel");  // Obtiene el carrusel usando jQuery (asegúrate de que esté cargado)
+
+  // Al cambiar el valor del slider
+  slider.oninput = function() {
+      var slideIndex = Math.round((this.value / 100) * (carousel.find('.owl-item').length - 1));
+      
+      // Deslizar el carrusel al índice correspondiente
+      carousel.trigger('to.owl.carousel', [slideIndex, 300]);
+  };
+
+  // Inicializa el carrusel (si aún no está inicializado)
+  carousel.owlCarousel({
+      items: 4,  // Número de elementos por diapositiva
+      loop: true,  // Hacer que el carrusel sea infinito
+      autoplay: true,  // Iniciar automáticamente
+      autoplayTimeout: 3000  // Tiempo entre transiciones
+  });
+});
