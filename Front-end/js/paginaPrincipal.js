@@ -45,3 +45,11 @@ function setActiveMenu() {
 // Llamar a la función cuando se cargue la página
 window.addEventListener('load', setActiveMenu);
 
+window.addEventListener('DOMContentLoaded', () => {
+    const titulo = document.querySelector('.textoTituloMarca');
+    if (titulo) {
+        setTimeout(() => {
+            titulo.classList.add('loaded');
+        }, 100); // Elimina el retraso si quieres que sea inmediato
+    }
+});
