@@ -195,9 +195,18 @@
                         Accesora de venta
                     </div>
                 </div>
-            </div>
-        <input id="myRange" class="slider" value="50" max="100" min="0" type="range">
+                <!-- Tarjeta 8 -->
 
+                <div class="card-client">
+                    <div class="user-picture">
+                        <img src="./img/vendedores/einer_removebg-preview.png" alt="">
+                    </div>
+                    <p class="name-client">Einer</p>
+                    <div class="social-media">
+                        Accesor de venta
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -211,48 +220,52 @@
         <div class="contactos">
             <!-- Mapa -->
             <div class="contactosMapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.661517592674!2d-75.27984192527069!3d2.913386597063026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b738ea9010383%3A0xa15d2156dd0bc60f!2sCl.%2014%20Sur%20%236-134%2C%20zona%20industrial%2C%20Neiva%2C%20Huila!5e0!3m2!1ses!2sco!4v1731080789215!5m2!1ses!2sco" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.668428614636!2d-75.2851084252708!3d2.91143329706498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b738fa7728c2d%3A0xd397af505c3a4683!2sDistribuidora%20Univentas!5e0!3m2!1ses!2sco!4v1732807167395!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                   
                 </iframe>
             </div>
             <!-- Tarjeta -->
-            <div class="contactosTarjeta">
-                <div class="card">
-                   <a class="card1" href="#">
-                    <p>Redes sociales</p>
-                    <p class="small">
-                        <i class="fa-brands fa-square-instagram"></i> 
-                        <i class="fa-brands fa-square-facebook"></i>
-                        <i class="fa-brands fa-square-whatsapp"></i>
+             <!-- PRIMER TARJETA -->
+             <div class="cards">
+                 <div class="card red">
+                     <p class="tip" onclick="marcarNumero('3114595935')">Escríbenos o llámanos a nuestro celular </p>
+                     
+                     <p class="second-text" onclick="marcarNumero('3114595935')"><i class="fa-solid fa-square-phone" onclick="marcarNumero('3114595935')" style="color: #ffbe33  ;"></i>+57 311-459-5935</p>
+                 </div>
+                 <div class="card blue">
+                    <p class="tip" style="color:#2a2929;">
+                        Comunícate con nosotros a través de nuestros correos electrónicos
                     </p>
-                    <div class="go-corner" href="#">
-                      <div class="go-arrow">
-                        →
-                      </div>
-                    </div>
-                  </a>
+                    <p class="secondEmail-text" onclick="enviarCorreo('uniasociadosltda@gmail.com')">
+                        <i class="fa-solid fa-square-envelope" style="color: #D44638;"></i> uniasociadosltda@gmail.com
+
+                    </p>
                 </div>
-                <div class="cardCorreo">
-                    <a class="card2" href="#">
-                     <p>Redes sociales</p>
-                     <p class="small">
-                         <i class="fa-brands fa-square-instagram"></i> 
-                         <i class="fa-brands fa-square-facebook"></i>
-                         <i class="fa-brands fa-square-whatsapp"></i>
+                
+                 <div class="card green" style="color: #292a29;">
+                     <p class="tip">¡Síguenos y envíanos un mensaje por nuestras redes!</p>
+                     <p class="second-text">
+                        <!-- Enlace al perfil de whatsapp -->
+                        <a href="https://wa.me/message/V2XTDLFYQJORE1" target="_blank">
+                            <i class="fa-brands fa-square-whatsapp"style="font-size: 2.5rem;color: #0b8a18;" ></i> <!-- Icono de whatsapp -->
+                        </a>
+
+                        <!-- Enlace al perfil de facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=61569638182534" target="_blank">
+                            <i class="fa-brands fa-square-facebook"style="font-size: 2.5rem;color: #013e9b ;"></i> <!-- Icono de facebook -->
+                        </a>
+
+                        <!-- Enlace al perfil de instagram -->
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-square-instagram"style="font-size: 2.5rem;color: #833AB4; "></i> <!-- Icono de instagram -->
+                        </a>
+
                      </p>
-                     <div class="go-corner" href="#">
-                       <div class="go-arrow">
-                         →
-                       </div>
-                     </div>
-                   </a>
-                </div>
-            </div>
+                 </div>
+             </div>
+
+              <!-- FIN TARJETAS -->
+
+        </div>  
     </section>
     
 
@@ -264,9 +277,9 @@
                     <div class="footer_contact">
                         <h4>Contáctanos</h4>
                         <div class="contact_link_box">
-                            <a href="https://www.google.com/maps/place/Cl.+14+Sur+%236-134,+zona+industrial,+Neiva,+Huila/@2.9133866,-75.2798419,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3b738ea9010383:0xa15d2156dd0bc60f!8m2!3d2.9133866!4d-75.277267!16s%2Fg%2F11vyyl5myg?hl=es&entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i><span>cll 14 sur #6-134</span></a>
+                            <a href="https://www.google.com/maps/place/Cl.+14+Sur+%236-134,+zona+industrial,+Neiva,+Huila/@2.9133866,-75.2798419,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3b738ea9010383:0xa15d2156dd0bc60f!8m2!3d2.9133866!4d-75.277267!16s%2Fg%2F11vyyl5myg?hl=es&entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Cl. 14 Sur #6 72, Neiva, Huila</span></a>
                             <a href="#" onclick="marcarNumero('311 4595935')"><i class="fa fa-phone" aria-hidden="true"></i><span>+57 311-459-5935</span></a>
-                            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span>distribuidorauniventas@hotmail.com</span></a>
+                            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span>uniasociadosltda@gmail.com</span></a>
                         </div>
                     </div>
                 </div>
@@ -274,9 +287,19 @@
                     <div class="footer_detail">
                         <h4>Nuestras redes sociales</h4>
                         <div class="contenedor-horizontal">
-                            <i class="fa-brands fa-facebook-f" id="iconoFacebook"></i>
-                            <i class="fa-brands fa-whatsapp" id="iconoWhatsapp"></i>
-                            <i class="fa-brands fa-instagram" id="iconoInstagram"></i>
+                            <a href="https://wa.me/message/V2XTDLFYQJORE1" target="_blank">
+                                <i class="fa-brands fa-square-whatsapp"style="font-size: 2.5rem;color: #ffbe33  ;" ></i> <!-- Icono de whatsapp -->
+                            </a>
+    
+                            <!-- Enlace al perfil de facebook -->
+                            <a href="https://www.facebook.com/profile.php?id=61569638182534" target="_blank">
+                                <i class="fa-brands fa-square-facebook"style="font-size: 2.5rem;color: #ffbe33   ;"></i> <!-- Icono de facebook -->
+                            </a>
+    
+                            <!-- Enlace al perfil de instagram -->
+                            <a href="" target="_blank">
+                                <i class="fa-brands fa-square-instagram"style="font-size: 2.5rem;color: #ffbe33  ; "></i> <!-- Icono de instagram -->
+                            </a>
                         </div>
 
                     </div>
@@ -284,9 +307,9 @@
                 <div class="col-md-4 footer-col">
                     <h4>Nuestros horarios</h4>
                     <p>De lunes a viernes</p>
-                    <p>7:00 Am - 6:00 Pm</p>
+                    <p>7:00 Am - 5:00 Pm</p>
                     <p>Sabados</p>
-                    <p>7:00 Am - 1:00 Pm</p>
+                    <p>7:00 Am - 12:00 Pm</p>
                 </div>
             </div>
         </div>

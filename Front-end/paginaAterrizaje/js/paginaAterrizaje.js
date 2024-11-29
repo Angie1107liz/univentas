@@ -80,7 +80,7 @@ function closeSlider() {
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-      items: 4,
+      items: 3,
       loop: true,
       autoplay: true,
       autoplayTimeout: 2000,
@@ -106,29 +106,20 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 });  
-
+// INICIO MARCAR NUMERO TELEFONICO CONTACTANOS
 function marcarNumero(numero) {
   // Aquí puedes realizar la acción de marcar el número, por ejemplo, redirigir a una URL tel: con el número deseado
   window.location.href = 'tel:' + numero;
 }
 // slider
-document.addEventListener('DOMContentLoaded', function() {
-  var slider = document.getElementById("myRange");  // Obtiene el slider
-  var carousel = $(".owl-carousel");  // Obtiene el carrusel usando jQuery (asegúrate de que esté cargado)
 
-  // Al cambiar el valor del slider
-  slider.oninput = function() {
-      var slideIndex = Math.round((this.value / 100) * (carousel.find('.owl-item').length - 1));
-      
-      // Deslizar el carrusel al índice correspondiente
-      carousel.trigger('to.owl.carousel', [slideIndex, 300]);
-  };
+// FIN MARCAR NUMERO TELEFONICO CONTACTANOS
 
-  // Inicializa el carrusel (si aún no está inicializado)
-  carousel.owlCarousel({
-      items: 4,  // Número de elementos por diapositiva
-      loop: true,  // Hacer que el carrusel sea infinito
-      autoplay: true,  // Iniciar automáticamente
-      autoplayTimeout: 3000  // Tiempo entre transiciones
-  });
-});
+
+// INICIO CORREO ELECTRONICO CONTACTANOS
+function enviarCorreo(correo) {
+  // Redirige al esquema mailto: para iniciar un correo electrónico
+  window.location.href = 'mailto:' + correo;
+}
+
+// FIN CORREO ELECTRONICO CONTACTANOS 

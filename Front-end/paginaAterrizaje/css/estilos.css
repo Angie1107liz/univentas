@@ -222,7 +222,7 @@ body {
 .category-buttons button {
     background-color: #0b1f44f2;
     color: white;
-    border: 0.5px solid rgb(255, 255, 255); 
+
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 10px;
@@ -483,40 +483,13 @@ justify-content: center;
 .owl-carousel {
   display: flex;
   justify-content: center;
-  padding: 20px 112px 15px;
+  padding: 20px 85px 15px 103px;
   margin: 11px auto;
   height: auto;
   width: 77%;
+  position: relative;
+  left: 4%;
 }
-/* INICIO DE SLIDER */
-/* From Uiverse.io by PriyanshuGupta28 */ 
-.slider {
-  width: 100%;
-  height: 10px;
-  background: #ddd;
-  border-radius: 5px;
-  -webkit-appearance: none;
-  appearance: none;
-  outline: none;
-}
-
-.slider::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  background: #ffbe33;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #ffbe33;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* FIN DE SLIDER  */
 
 /* FIN NOSOTROS */
 
@@ -529,7 +502,7 @@ justify-content: center;
   /* Contenedor de contactos */
 .contactos {
   display: flex;
-  justify-content: space-between; /* Distribuir mapa y tarjeta */
+  justify-content: flex-start; /* Distribuir mapa y tarjeta */
   align-items: center; /* Alinear verticalmente */
   gap: 20px; /* Espaciado entre mapa y tarjeta */
   width: 90%;
@@ -541,7 +514,7 @@ justify-content: center;
     font-size: 3.5rem;
     margin-top: 4%;
     margin-bottom: 40px;
-    color:#d84539;
+    color:#b42e22;
     font-family: "Luckiest Guy", cursive;
     display: flex;
     justify-content: center;
@@ -552,7 +525,6 @@ justify-content: center;
     color: #ffbe33; /* Color de texto al hacer hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
   }
-  /* INICIO CARTAS  */
 .contactosMapa{
   display: flex;
   height: 60%;
@@ -562,172 +534,78 @@ justify-content: center;
   position: relative;
   top: 3%;
 }
-/* FIN CARTAS */
-/* INICIO PRIMERA TARJETA */
-.card p {
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #666;
-}
-
-.card p.small {
-  font-size: 2rem;
+/* INICIO TARJETAS CONTACTOS*/
+.cards {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.go-corner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background-color: #ffbe33 ;
-  border-radius: 0 4px 0 32px;
+.cards .red {
+  background-color: #d8d4cd4c ;
+  box-shadow: 0 0 10px #013e9b, /* Efecto de iluminación suave */
+              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
 }
 
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: courier, sans;
+.cards .blue {
+  background-color: #d8d4cd4c;
+  box-shadow: 0 0 10px #ffbe33, /* Efecto de iluminación suave */
+              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
 }
 
-.card1 {
-  display: block;
-  position: relative;
-  max-width: 262px;
-  background-color: #f2f8f9;
-  border-radius: 4px;
-  padding: 32px 24px;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
+.cards .green {
+  background-color: #d8d4cd4c ;
+  box-shadow: 0 0 10px #b42e22, /* Efecto de iluminación suave */
+              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
+
 }
 
-.card1:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #ffbe33 ;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 50% 50%;
-  transition: transform 0.25s ease-out;
-}
-
-.card1:hover:before {
-  transform: scale(21);
-}
-
-.card1:hover p {
-  transition: all 0.3s ease-out;
-  color: #013e9b ;
-}
-
-.card1:hover h3 {
-  transition: all 0.3s ease-out;
-  color: #fff;
-}
-/* FIN PRIMERA CARTA */
-
-/* INICIO SEGUNDA CARTA */
-.cardCorreo p {
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #666;
-}
-
-.cardCorreo p.small {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.go-corner {
+.cards .card {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background-color: #ffbe33 ;
-  border-radius: 0 4px 0 32px;
+  flex-direction: column;
+  text-align: center;
+  height: 140px;
+  width: 131%;
+  border-radius: 10px;
+  color: #2a2929;
+  cursor: pointer;
+  transition: 400ms;
 }
 
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: courier, sans;
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
 }
 
-.card2 {
-  display: block;
-  position: relative;
-  max-width: 262px;
-  background-color: #f2f8f9;
-  border-radius: 4px;
-  padding: 32px 24px;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
+.cards .card p.second-text {
+  font-size: 1rem;
+  gap: 80px;
+  color: #2a2929;
+}
+.cards .card p.secondEmail-text {
+  font-size: 1rem;
+  gap: 80px;
+  color: #2a2929  ;
 }
 
-.card2:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #ffbe33 ;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 50% 50%;
-  transition: transform 0.25s ease-out;
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
 }
 
-.card2:hover:before {
-  transform: scale(21);
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
 }
-
-.card2:hover p {
-  transition: all 0.3s ease-out;
-  color: #013e9b ;
-}
-
-.card2 :hover h3 {
-  transition: all 0.3s ease-out;
-  color: #fff;
-}
-/* FIN SEGUNDA CARTA */
-
-
-
+/* FIN TARJETA CONTACTOS */
 /* FIN CONTACTOS */
 
 /* INICIO FOOTER */
 .footer_section {
-  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
+      background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
     color: #ffbe33;
     padding: 75px 0 40px 0;
     text-align: center;
