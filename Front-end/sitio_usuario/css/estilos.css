@@ -13,8 +13,8 @@
 
 body{
 background: linear-gradient(45deg,
-#013e9b   0,
-#020b47b2   100%) 0 0 / cover,
+#013f9bea   0,
+#0022ff53   100%) 0 0 / cover,
 url("../img/fondoBlancoAterrizaje.jpg") center center/cover no-repeat;
 background-size: cover;  /* Hace que la imagen cubra todo el área */
 background-position: center; /* Centra la imagen dentro del contenedor */
@@ -34,8 +34,8 @@ font-style: normal;
   /* Barra de navegación */
   .nav-bar {
     position: relative;
-    background-color: #cac5c56e;
-    padding: 10px 30px;
+    background-color: #e0e0e0;
+    border-radius: 11px 61px 19px 77px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
@@ -44,17 +44,16 @@ font-style: normal;
   .imageSiteNavigation{
     display: flex;
     justify-content: flex-start;
-    gap: 25px;
   }
   .imageNavigation{
-    width: 6%;
+    width: 17%;
 
   }
   .nav-list {
     list-style: none;
     display: flex;
     gap: 40px;
-    padding: 0;
+    padding: 34px;
   }
   
   .nav-item {
@@ -63,7 +62,7 @@ font-style: normal;
   }
   
   .nav-item a {
-    color: #ffffff ;
+    color: #013e9b ;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -75,7 +74,7 @@ font-style: normal;
   
   /* Efecto hover en los elementos de la lista */
   .nav-item:hover a {
-    color: #013e9b    ;  /* Cambia el color al pasar el mouse */
+    color: #ffbe33    ;  /* Cambia el color al pasar el mouse */
   }
   
   /* Indicador que se mueve bajo el enlace activo */
@@ -137,13 +136,12 @@ font-style: normal;
     height: 11rem;
     width: 95%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin: 25px auto;
     color: #ffffff;
     font-size: 16px;
-    padding: 15px 3px 5px;
-    position: relative;
-    top: 3rem;
-    left: 4rem;
     cursor: pointer;
     transition: all 0.3s ease; /* Suavizar la transición */
   }
@@ -155,7 +153,7 @@ font-style: normal;
     justify-content: center;
     list-style-type: none;
     color: #333333;
-    font-size: 1rem;
+    font-size: 2;
     margin-bottom: 20px;
     padding: 0;
   }
@@ -168,10 +166,84 @@ font-style: normal;
     margin-bottom: 20px;
     padding: 0;
   }
-  .structureSiteValues h3 {
-    font-family: "Salsa", cursive;
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-bottom: 10px;
+.structureSiteValues h3 {
+  font-family: "Salsa", cursive;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suavizar la transición */
 }
+.structureSiteValues h3:hover {
+  color: #ffbe33;
+}
+.value-list{
+  font-family: "Salsa", cursive;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suavizar la transición */
+}
+.value-list:hover{
+  color: #ffbe33;
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  left: 20rem;
+  top: 11rem;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  
+}
+
+.cta:hover svg {
+  transform: translateX(0); 
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
   /* FIN ESTRUCTURA */
