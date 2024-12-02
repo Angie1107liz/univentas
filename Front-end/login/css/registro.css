@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-image: url('../img/fondoDosEjem.png');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    font-family: "Amaranth", sans-serif;
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ININCIO DE LOGUIN */
+.titleRegister{
+    width: 62%;
+    font-weight: 600;
+    margin: 2% auto;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* top: 17%; */
+    color: #ffffff;
+    font-family: "Salsa", cursive;
+    font-style: normal;
+    font-size: 4.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  
+}
+.titleRegister:hover {
+    color: #ffbe33 ; /* Color de texto al hacer hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+.loginUniventas{
+    width: 14%;
+}
+
+  /* INICIO FORMULARIO */
+/* Estilo general */
+.register-container {
+    color: #ffbe33;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo de la caja del formulario */
+}
+
+/* Flexbox en el formulario */
+.register-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: space-between;
+}
+
+/* Cada contenedor de label + input en fila */
+.register-form .form-group {
+    display: flex;
+    flex-direction: column; /* Coloca el label y el input en columna */
+    width: 48%; /* 48% para que quepan 2 en una fila */
+    gap: 10px; /* Espacio entre el label y el input */
+}
+
+/* Label */
+.register-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada (inputs) */
+.register-form input {
+    width: 100%; /* Ocupa el 100% del espacio disponible */
+    padding: 10px;
+    background-color: #58535379;
+    color: #ffbe33;
+    margin-bottom: 15px;
+    border: 1px solid #ccccccb3;
+    border-radius: 4px;
+}
+
+/* Botón */
+.register-form button {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: #ffbe33;
+    color: #070707;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background: #0056b3;
+    color: #ffffff;
+}
+.register-form .button-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro de este contenedor */
+    width: 100%; /* Asegura que ocupe todo el ancho del formulario */
+}
+
+@media (max-width: 600px) {
+    .register-form .form-group {
+        width: 100%; /* Cada campo ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+
+
+  /* FIN FORMULARIIO */

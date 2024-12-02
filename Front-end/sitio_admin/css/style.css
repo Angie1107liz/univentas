@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    background-color: #9a9a9a38;
+    background: linear-gradient(135deg, #03074555 0%, #ffbe336d, #d846394e 100%,#ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* INICIO DE BARRA LATERAL */
+/* INICIO EJEMPLO */
+
+/* FIN EJEMPLO */
+.sidebar {
+    width: 60px;
+    background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
+    background-size: cover;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.sidebar.expanded {
+    width: 200px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 10px;
+    align-self: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item .icon {
+    font-size: 24px;
+    width: 60px;
+    text-align: center;
+}
+
+.menu-item .text {
+    display: none;
+    font-size: 18px;
+}
+
+.sidebar.expanded .menu-item .text {
+    display: inline;
+}
+
+.icon {
+    color: aliceblue;
+}
+/* Estilo cuando el ítem es activo */
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligero */
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  
+  .menu-item.active .icon {
+    color: #ffbe33; /* Cambio de color para el icono */
+  }
+  
+  .menu-item.active .text {
+    color: #ffbe33; /* Cambio de color para el texto */
+  }
+  
+
+/* FIN DE BARRA  LATERAL */
+
+/* INICIO DE BARRA NAVEGACION SUPERIOR */
+
+/* General reset y base */
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    height: 5rem;
+    width: 100%;
+    
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    gap: 60rem;
+}
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+#logoNavSuperior{
+    width: 20%;
+}
+
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px;
+        display: none;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* FIN DE BARRA DE NAVEGACION SUPERIOR */
+
+
+/* INICIO DE CONTENIDO PAGINA  */
+.titulos {
+    font-weight: 600;
+    margin: 4% auto 40px; /* Centramos y ajustamos */
+    color: #d84539;
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    font-size: 3.5rem;
+    justify-content: center;
+  }
+  
+Contenido de la pagina Inicio
+.page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    z-index: 10000;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 45rem;
+    height: 35rem;
+    max-height: 25rem;
+    margin: 7rem auto;
+    background-color: #ffffff00;
+    border-radius: 8px;
+    box-shadow: 2px 8px 15px 4px #e72e2e42;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.welcome-section h2 {
+    font-size: 1.8rem;
+    font-family: "Kanit", sans-serif;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    font-family: "Kanit", sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlights h3 {
+    font-size: 1.4rem;
+    font-family: "Kanit", sans-serif;   
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.highlights ul {
+    list-style-type: none;
+    color: #333333;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.highlights li {
+    margin: 5px 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.cta-button {
+    background-color: #003366;
+    color: #ffbe33;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 14px 53px;
+    width: 41%;
+    position: relative;
+    top: 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: backgrou
+}
+
+.cta-button:hover {
+    background-color: #ffbe33;
+    color: #003366;
+}
+
+#camionDistribucciones {
+    max-height: 25rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    display: block;
+    position: relative;
+    left: 10rem;
+    bottom: 3rem;
+}
+#camionUniventas{
+    width: 31%;
+    position: relative;
+    left: 10rem;
+    bottom: 12rem;
+}
+/* FIN DE CONTENIDO PAGINA */
+
+
+
+/* INICIO FOOTER SITIO WEB  */
+.footer {
+    position: fixed; /* Para que el footer quede fijo */
+    bottom: 0; /* Se posiciona al final de la ventana */
+    width: 100%; /* Ocupa todo el ancho */
+    background-image: url('/Front-end/img/fondoDosFooter.jpg'); /* Ruta de tu imagen */
+    padding: 10px 0; /* Espaciado */
+    text-align: center; /* Centra los íconos */
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los íconos */
+  }
+  
+  .social-icons a {
+    color: #fff; /* Color de los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffbe33; /* Cambio de color para el texto */
+  }
+  
+/* FIN REDES FOOTER */
+
+
+/* FIN FOOTER SITIO WEB */

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 /* INICIO ESTILOS GENERALES */
 
 * {
@@ -130,13 +132,13 @@ body {
 /* INICIO MARCAS */
 
 #marcas {
-  background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
+  background-image: url('../img/fondoDos.jpg'); /* Ruta de tu imagen */
   width: 100%;
-  height: 105vh;
+  height: 110vh;
 }
 
 .textoTituloMarca{
-  font-weight: 600;
+  font-weight: bold;
   margin: 4% auto; /* Centramos y ajustamos */
   z-index: 10;
   text-align: center; 
@@ -145,8 +147,7 @@ body {
   position: relative;
   top: 15%;
   color: #ffffff;
-  font-family: "Luckiest Guy", cursive;
-  font-weight: 400;
+  font-family: "Salsa", cursive;
   font-style: normal;
   font-size: 3.5rem; 
   cursor: pointer;
@@ -286,7 +287,7 @@ body {
     font-weight: 600;
     margin: 4% auto 40px; /* Centramos y ajustamos */
     color: #b42e22;
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Salsa", cursive;
     display: flex;
     font-size: 3.5rem;
     justify-content: center;
@@ -353,7 +354,7 @@ justify-content: center;
 
 /* INICIO NOSOTROS */
 #nosotros {
-  background-image: url('/Front-end/img/fondoDos.jpg');
+  background-image: url('../img/fondoDos.jpg');
   width: 100%;
   height: 75vh;
 }
@@ -365,7 +366,7 @@ justify-content: center;
   top: 5%;
   margin-bottom: 40px;
   color: #ffffff;
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Salsa", cursive;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -515,7 +516,7 @@ justify-content: center;
     margin-top: 4%;
     margin-bottom: 40px;
     color:#b42e22;
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Salsa", cursive;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -605,7 +606,7 @@ justify-content: center;
 
 /* INICIO FOOTER */
 .footer_section {
-      background-image: url('/Front-end/img/fondoDos.jpg'); /* Ruta de tu imagen */
+    background-image: url('../img/fondoDos.jpg'); /* Ruta de tu imagen */
     color: #ffbe33;
     padding: 75px 0 40px 0;
     text-align: center;
