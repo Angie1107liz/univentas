@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body{
+background: linear-gradient(45deg,
+#013e9b   0,
+#013f9b9d   100%) 0 0 / cover,
+url("../img/fondoBlancoAterrizaje.jpg") center center/cover no-repeat;
+font-family: "Amaranth", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+
+/* INICIO DE BARRA  NAVEGACION */
+/* Estilos globales */
+
+  
+ 
+  /* Barra de navegación */
+  .nav-bar {
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 11px 61px 19px 77px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageSiteNavigation{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 4%;
+    gap: 4%;
+    width: 50%;
+  }
+  .imageNavigation{
+    width: 10%;
+
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 34px;
+  }
+  
+  .nav-item {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item a {
+    color: #013e9b ;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover en los elementos de la lista */
+  .nav-item:hover a {
+    color: #ffbe33    ;  /* Cambia el color al pasar el mouse */
+  }
+  
+  /* Indicador que se mueve bajo el enlace activo */
+  .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #013e9b    ;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  /* Animación activa cuando se pasa el mouse */
+  .nav-item:hover .indicator {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Estilo para cuando el enlace está activo */
+  .nav-item.active a {
+    color: #ff6347;
+  }
+  
+  /* Media query para hacer que la barra se vea bien en dispositivos móviles */
+  @media (max-width: 768px) {
+    .nav-bar {
+      padding: 15px;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  /* FIN BARRA NAVEGACION  */
+
+/* Contenedor de las tarjetas */
+.tituloNosotros {
+  font-weight: 600;
+  font-size: 3.5rem;
+  position: relative;
+  top: 5%;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-family: "Salsa", cursive;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Estilo de la tarjeta */
+.card {
+  width: 100%;
+  max-width: 16rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #222222ab; /* Fondo más neutro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto de hover para la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0452b8c5; /* Resaltar borde */
+}
+
+.card-img-top {
+  width: 70%;
+  height: 180px; /* Altura fija para uniformidad */
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 14%;
+  top: 3%;
+  border-bottom: 2px solid #eee;
+}
+
+.card-body {
+  padding: 1.25rem; /* Más espacio */
+  text-align: center; /* Centrar el contenido */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Aumentar tamaño */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: #ffbe33; /* Cambio de color en hover */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #aaa; /* Mejor contraste */
+  margin-bottom: 1rem;
+}
+
+/* Botón más llamativo */
+.btn-primary {
+  background-color: #10790a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px; /* Bordes redondeados */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1a830f;
+  transform: scale(1.1); /* Escalar al pasar */
+}
+
+/* Estilos Responsivos */
+
+/* Para pantallas más pequeñas */
+@media (max-width: 992px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 1rem; /* Reducir padding */
+  }
+}

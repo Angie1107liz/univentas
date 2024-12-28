@@ -11,121 +11,187 @@
     box-sizing: border-box;
 }
 
+/* Estilos generales */
 body {
+  margin: 0;
+  font-family: "Amaranth", sans-serif;
+  background-color: #f4f4f9;
+}
+
+body.no-scroll {
+  overflow: hidden; /* Deshabilita el desplazamiento */
+}
+/* INICIO BARRA NAVEGACION */
+
+.navbar {
+  z-index: 1000;
+  width: 100%;
+  background-color: #f4f4f9;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  left: 0;
+}
+
+.logo-container {
+  transition: transform 0.3s ease; /* Suaviza el movimiento del logo */
+}
+
+.logo-container.shift-right {
+  transform: translateX(200px); /* Ajusta la distancia según lo necesario */
+}
+
+.logoUni {
+  width: 24rem;
+  height: auto;
+}
+
+/* Botón de menú tipo hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos de enlaces */
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  color: #013e9b;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
   font-family: "Amaranth", sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #f4f4f9;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* FIN ESTILOS GENRALES */
-
-/* INICIO BARRA NAVEGACION */
-.navbar {    
-  position: fixed;
-  z-index: 1000;
-  height: 7rem;
-  width: 94.5rem;
-  background-color: #ededed;
-  border-radius: 10px 175px;
-  padding: 0% 3%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-wrap: wrap;
-}
-
-/* Estilos de los enlaces */
-.nav-link {
-    color: #2c4389;
-    font-size: 1rem; /* Cambiamos a rem para la responsividad */
-    font-weight: bold;
-    text-decoration: none;
-    padding: 9px 12px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    font-family: "Amaranth", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
 /* Efecto hover de los enlaces */
 .nav-link:hover {
-    background-color: #ffbe33  ;
-    color: #2c4389;
-    transform: scale(1.1);
+  background-color: #ffbe33;
+  color: #2c4389;
+  border-radius: 5px;
+  height: 30px;
+  transform: scale(1.1);
 }
 
 /* Efecto activo para el enlace seleccionado */
 .nav-link:active {
-    background-color: #ffbe33  ;
-    color: #333;
-    transform: scale(1);
-}
-
-/* Estilos del contenido */
-.content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Animación de aparición de la barra */
-@media (prefers-reduced-motion: no-preference) {
-    .navbar {
-        animation: fadeIn 1s ease-out;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Logo */
-.logoUni {
-    width: 30rem;
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; 
+  background-color: #ffbe33;
+  color: #333;
+  transform: scale(1);
 }
 
 /* Botón de iniciar sesión */
 .botonIniciarSesion {
-    padding: 9px 22px;
-    font-size: 16px;
-    color: white;
-    background-color: #ffbe33  ;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-    
+  padding: 9px 22px;
+  font-size: 16px;
+  color: white;
+  background-color: #ffbe33;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .botonIniciarSesion:hover {
-    transform: scale(1.1);
-    background-color: #0056b3;
+  transform: scale(1.1);
+  background-color: #0056b3;
 }
 
 .botonIniciarSesion:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
+
+/* Menú lateral en pantallas pequeñas y medianas */
+@media (max-width: 1128px) {
+  .menu-toggle {
+    display: block;
+    
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculto a la izquierda */
+    width: 70%;
+    height: 100%;
+    background-color: #ededed;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    transition: left 0.3s ease; /* Animación para el desplazamiento */
+  }
+
+  .nav-links.open {
+    left: 0; /* Muestra el menú desde la izquierda */
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .botonIniciarSesion {
+    font-size: 1.2rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Botón de cierre (solo visible en pantallas pequeñas) */
+  .close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    display: block; /* Visible en pantallas pequeñas */
+    cursor: pointer;
+  }
+
+  .close-menu:hover {
+    color: #ffbe33;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1129px) {
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    gap: 4rem;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+  }
+
+  .close-menu {
+    display: none; /* Asegura que no se muestre en pantallas grandes */
+  }
+}
+
+/* FIN BARRA NAVEGACION  */
 /* FIN BARRA NAVEGACION */
 
 
@@ -149,7 +215,7 @@ body {
   color: #ffffff;
   font-family: "Salsa", cursive;
   font-style: normal;
-  font-size: 3.5rem; 
+  font-size: 3rem; 
   cursor: pointer;
   transition: all 0.3s ease; /* Suavizar la transición */
 
@@ -170,16 +236,16 @@ body {
 }
 
 /* Estilos para el logo */
-#imagenLogo {
+#imagenLogoUniventas {
     width: 100%; 
-    max-width: 17rem; 
+    max-width: 27rem; 
     height: auto; 
     margin: 10rem auto 0; /* Centramos con auto */
     border-radius: 39px 51px;
   }
 #imagenLogoUnilever{
   width: 100%; 
-  max-width: 17rem; 
+  max-width: 27rem; 
   height: auto; 
   margin: 10rem auto 0; /* Centramos con auto */
   margin-left: 5%;
@@ -191,6 +257,75 @@ body {
     justify-content: flex-start;
     z-index: 10;
 }
+/* From Uiverse.io by Yaya12085 */ 
+.radio-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.radio-input input[type="radio"] {
+  display: none;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #013e9b;
+  border-radius: 5px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type="radio"]:checked + label:before {
+  background-color: #b42e22;
+  top: 0;
+}
+
+.radio-input input[type="radio"]:checked + label {
+  background-color: #042588b0;
+  color: #fff;
+  border-color: #ffbe33;
+  animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 /* Inicio de slider de marcas */
 .logo-slider-container {
@@ -268,6 +403,15 @@ body {
 }
 
 /* FIN MARCAS */
+
+
+/* INICIO RESPONSIVE ESTILOS GENERALES Y MARCAS */
+
+/* FIN RESPONSIVE ESTILOS GENERALES Y MARCAS */
+
+
+
+
 
 
 /* INICIO RESPONSIVE ESTILOS GENERALES Y MARCAS */

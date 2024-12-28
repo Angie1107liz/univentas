@@ -1,9 +1,35 @@
-//inicio de los slider de la pagina de presentación.
+const menuToggle = document.querySelector('.menu-toggle');
+const closeMenu = document.querySelector('.close-menu');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+const logoContainer = document.querySelector('.logo-container');
+
+// Lógica para abrir el menú lateral y ocultar el ícono de menú
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.add('open');
+    body.classList.add('no-scroll');
+    logoContainer.classList.add('shift-right'); // Mueve el logo
+    menuToggle.style.display = 'none'; // Oculta el ícono de menú
+});
+
+// FUNCION PARA QUE ICONO DE BARRA LATERAL
+closeMenu.addEventListener('click', () => {
+    if (window.innerWidth <= 1024) { // Aplica la lógica solo para pantallas medianas y pequeñas (máximo 1024px de ancho)
+        navLinks.classList.remove('open');
+        body.classList.remove('no-scroll');
+        logoContainer.classList.remove('shift-right'); // Devuelve el logo
+        menuToggle.style.display = 'block'; // Muestra el ícono de menú nuevamente
+    }
+});
+
+// MARCAS
+// Inicio de los slider de la página de presentación.
 let currentCategory = '';
 let currentIndex = 0;
 let interval;
 let isCategoryOpen = false; // Estado para verificar si la categoría está abierta
 
+// Función para filtrar y mostrar imágenes
 function filterImages(category) {
   // Verifica si la misma categoría ya está abierta
   if (isCategoryOpen && currentCategory === category) {
@@ -33,6 +59,7 @@ function filterImages(category) {
   }, 2000);
 }
 
+// Función para mostrar un grupo de 4 imágenes
 function displayImagesGroup(images, startIndex) {
   // Muestra un grupo de 4 imágenes a partir del índice indicado
   for (let i = startIndex; i < startIndex + 4; i++) {
@@ -43,6 +70,7 @@ function displayImagesGroup(images, startIndex) {
   }
 }
 
+// Función para deslizar las imágenes
 function slideImages(images) {
   // Oculta el grupo actual de 4 imágenes
   images.forEach(img => {
@@ -57,6 +85,7 @@ function slideImages(images) {
   displayImagesGroup(images, currentIndex);
 }
 
+// Función para cerrar el slider
 function closeSlider() {
   // Oculta todas las imágenes y limpia el intervalo
   const images = document.querySelectorAll('.logo-slider img');
@@ -70,13 +99,23 @@ function closeSlider() {
   currentCategory = ''; // Reinicia la categoría actual
 }
 
+// Función para resetear el color del botón al cerrar la categoría
+function resetRadioColor(radio) {
+  // Obtiene el label asociado al radio botón
+  const label = document.querySelector(`label[for="${radio.id}"]`);
+
+  // Verifica si la categoría está abierta y coincide con la actual
+  if (isCategoryOpen && currentCategory === radio.value) {
+    closeSlider(); // Cierra el slider
+    // Resetea el color del botón
+    label.style.backgroundColor = '#013e9b'; // Color de fondo predeterminado
+    label.style.color = 'white'; // Color de texto predeterminado
+    label.style.borderColor = '#ccc'; // Color del borde predeterminado
+  }
+}
 
 
-// fin de lo slider de la pagina de presentación.
-
-
-// NOSOTROSSSSS
-
+// INICIO NOSOTROS
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
@@ -106,6 +145,11 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 });  
+
+// FIN NOSOTROS
+
+// INICIO CONTACTANOS 
+
 // INICIO MARCAR NUMERO TELEFONICO CONTACTANOS
 function marcarNumero(numero) {
   // Aquí puedes realizar la acción de marcar el número, por ejemplo, redirigir a una URL tel: con el número deseado
@@ -123,3 +167,5 @@ function enviarCorreo(correo) {
 }
 
 // FIN CORREO ELECTRONICO CONTACTANOS 
+
+// FIN CONTACTANOS 

@@ -13,8 +13,8 @@
 
 body{
 background: linear-gradient(45deg,
-#013f9bea   0,
-#0022ff53   100%) 0 0 / cover,
+#013e9b   0,
+#013f9b9d   100%) 0 0 / cover,
 url("../img/fondoBlancoAterrizaje.jpg") center center/cover no-repeat;
 background-size: cover;  /* Hace que la imagen cubra todo el área */
 background-position: center; /* Centra la imagen dentro del contenedor */
@@ -189,61 +189,97 @@ font-style: normal;
 }
 
 
-/* From Uiverse.io by alexmaracinaru */ 
-.cta {
-  border: none;
-  background: none;
+/* From Uiverse.io by cssbuttons-io */ 
+.ViewCatalog{
+  display: flex;
+  justify-content: flex-end ;
+}
+button {
+  position: relative;
+  display: inline-block;
   cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
-  left: 20rem;
-  top: 11rem;
-}
-
-.cta span {
-  padding-bottom: 7px;
-  letter-spacing: 4px;
-  font-size: 14px;
-  padding-right: 15px;
-  text-transform: uppercase;
-}
-
-.cta svg {
-  transform: translateX(-8px);
-  transition: all 0.3s ease;
-  
-}
-
-.cta:hover svg {
-  transform: translateX(0); 
-}
-
-.cta:active svg {
-  transform: scale(0.9);
-}
-
-.hover-underline-animation {
-  position: relative;
-  color: rgb(255, 255, 255);
-  padding-bottom: 20px;
-}
-
-.hover-underline-animation:after {
-  content: "";
+  display: block;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
+  top: 0;
   bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
   left: 0;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
 
   /* FIN ESTRUCTURA */
