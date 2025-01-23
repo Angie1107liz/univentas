@@ -1,25 +1,13 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const closeMenu = document.querySelector('.close-menu');
 const navLinks = document.querySelector('.nav-links');
-const body = document.body;
-const logoContainer = document.querySelector('.logo-container');
 
-// Lógica para abrir el menú lateral y ocultar el ícono de menú
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.add('open');
-    body.classList.add('no-scroll');
-    logoContainer.classList.add('shift-right'); // Mueve el logo
-    menuToggle.style.display = 'none'; // Oculta el ícono de menú
+  navLinks.classList.add('open');
 });
 
-// FUNCION PARA QUE ICONO DE BARRA LATERAL
 closeMenu.addEventListener('click', () => {
-    if (window.innerWidth <= 1024) { // Aplica la lógica solo para pantallas medianas y pequeñas (máximo 1024px de ancho)
-        navLinks.classList.remove('open');
-        body.classList.remove('no-scroll');
-        logoContainer.classList.remove('shift-right'); // Devuelve el logo
-        menuToggle.style.display = 'block'; // Muestra el ícono de menú nuevamente
-    }
+  navLinks.classList.remove('open');
 });
 
 // MARCAS
@@ -113,6 +101,22 @@ function resetRadioColor(radio) {
     label.style.borderColor = '#ccc'; // Color del borde predeterminado
   }
 }
+// INICIO ALIADOS
+document.addEventListener("DOMContentLoaded", () => {
+  const achievements = document.querySelectorAll(".achievement");
+
+  achievements.forEach((achievement) => {
+    achievement.addEventListener("mouseover", () => {
+      achievement.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 0.2)";
+    });
+
+    achievement.addEventListener("mouseout", () => {
+      achievement.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+    });
+  });
+});
+
+// FIN ALIADOS
 
 
 // INICIO NOSOTROS
