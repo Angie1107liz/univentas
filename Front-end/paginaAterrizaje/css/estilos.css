@@ -639,82 +639,112 @@ h1 {
 
 .contactosMapa{
   display: flex;
-  height: 60%;
-  width: 40%;
+  height: 100%;
+  width: 100%;
   justify-content: flex-start;
   margin: 33px;
   position: relative;
-  top: 3%;
+  top: 6%;
 }
-
-/* INICIO TARJETAS CONTACTOS*/
-.cards {
+.mapaContacto{
+  height: 25rem;
+  width: 100%;
+}
+.containerContactanos{
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
   position: relative;
-  top: 8rem;
-}
+  top: 10%;
+  }
 
-.cards .red {
-  background-color: #d8d4cd4c ;
-  box-shadow: 0 0 10px #013e9b, /* Efecto de iluminación suave */
-              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
 
-}
-
-.cards .blue {
-  background-color: #d8d4cd4c;
-  box-shadow: 0 0 10px #ffbe33, /* Efecto de iluminación suave */
-              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-}
-
-.cards .green {
-  background-color: #d8d4cd4c ;
-  box-shadow: 0 0 10px #b42e22, /* Efecto de iluminación suave */
-              0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-
-}
-
-.cards .card {
+.cardContactanos {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  height: 140px;
-  width: 131%;
-  border-radius: 10px;
-  color: #2a2929;
-  cursor: pointer;
-  transition: 400ms;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 52px;
+  width: 30%;
 }
 
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 700;
+.cardContactanos::before, .cardContactanos::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1;
 }
 
-.cards .card p.second-text {
-  font-size: 1rem;
-  gap: 80px;
-  color: #2a2929;
+  
+
+.cardContactanos:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.cards .card p.secondEmail-text {
-  font-size: 1rem;
-  gap: 80px;
-  color: #2a2929  ;
+
+.cardContactanos:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.cardContactanos:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.cardContactanos:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
 }
 
 
-.cards .card:hover {
-  transform: scale(1.1, 1.1);
+.cardContactanos .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
 }
 
-.cards:hover > .card:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.9, 0.9);
+.cardContactanos .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1);
 }
+
+.cardContactanos .social-link:hover {
+  background-color: rgba(249, 244, 255, 0.774);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 /* FIN TARJETA CONTACTOS */
 /* FIN CONTACTOS */
 
@@ -1068,8 +1098,8 @@ h1 {
    }
 
   #celularesMarcas {
-    width: 40%;
-    padding: 25% 13px 16%;
+    width: 45%;
+    padding: 35% 13px 16%;
   }
 
   .imagenMarcasCelulares img {
@@ -1086,7 +1116,7 @@ h1 {
   }
 
   #celularesMarcas {
-    width: 70%;
+    width: 65%;
     padding: 35px;
     position: relative;
     top: 2rem;
@@ -1157,7 +1187,7 @@ h1 {
 
   .slider {
     max-width: 95%;
-    top: 0%;
+    top: 40%;
   }
 
   .slider-track {
@@ -1171,7 +1201,6 @@ h1 {
 }
 /* INICIO DE ALIANZA */
 
-/* FIN ALIANZA */
 /* Pantallas pequeñas (menores a 768px) */
 @media (max-width: 767px) {
   .slider-container {
@@ -1372,14 +1401,12 @@ h1 {
     gap: 30px;
   }
   .contactosMapa {
-    width: 35%;
+    width: 100%;
+    height: 100%;
     position: relative;
     top: 4rem;
   }
-  .cards .card {
-    width: 120%;
-    height: 8rem;
-  }
+
 
 
 /* Grande (pantallas de entre 992px y 1199px) */
@@ -1393,17 +1420,12 @@ h1 {
     gap: 25px;
   }
   .contactosMapa {
-    width: 40%;
+    width: 100%;
     position: relative;
     bottom: 4rem;
 
   }
-  .cards .card {
-    width: 90%;
-    position: relative;
-    bottom: 4rem;
-  }
-}
+
 
 /* Mediana (pantallas de entre 768px y 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
@@ -1423,15 +1445,7 @@ h1 {
     position: relative;
     bottom: 2rem;
     right: 10rem; 
-   }
-
-  .cards .card {
-    width: 54%;
-    position: relative;
-    left: 23rem;
-    bottom: 34rem;
-  }
-}
+  }}
 
 /* Pequeña (pantallas de entre 576px y 767px) */
 @media (max-width: 767px) and (min-width: 576px) {
@@ -1444,11 +1458,7 @@ h1 {
   }
   .contactosMapa {
     width: 100%;
-  }
-  .cards .card {
-    width: 110%;
-  }
-}
+ }}
 
 /* Extra Pequeña (pantallas de menos de 576px) */
 @media (max-width: 575px) {
@@ -1466,15 +1476,79 @@ h1 {
     width: 100%;
     margin: 20px 0;
   }
-  .cards .card {
-    width: 100%;
+}}
+@media (min-width: 1200px) {
+  /* Pantallas extragrandes */
+  .containerContactanos {
+    top: 8%;
+  }
+  .cardContactanos {
+    width: 25%;
+    height: 60px;
+  }
+  .cardContactanos .social-link {
+    font-size: 28px;
   }
 }
 
-/* FIN CONTACTANOS */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Pantallas grandes */
+  .containerContactanos {
+    top: 8%;
+  }
+  .cardContactanos {
+    width: 35%;
+    height: 55px;
+  }
 
+  .cardContactanos .social-link {
+    font-size: 26px;
+  }
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Pantallas medianas */
+  .containerContactanos {
+    top: 8%;
+  }
+  .cardContactanos {
+    width: 50%;
+    height: 50px;
+  }
 
-/* FIN RESPONSIVE  */
+  .cardContactanos .social-link {
+    font-size: 24px;
+  }
+}
 
-	
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Pantallas pequeñas */
+  .containerContactanos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardContactanos {
+    width: 70%;
+    height: 45px;
+  }
+
+  .cardContactanos .social-link {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Pantallas extra pequeñas */
+  .containerContactanos {
+    flex-direction: column;
+    align-items: center;
+    top: 15%;
+  }
+  .cardContactanos {
+    width: 90%;
+    height: 40px;
+  }
+  .cardContactanos .social-link {
+    font-size: 20px;
+  }
+}
