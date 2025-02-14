@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Univentas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome & Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/ciclos.css">
+    <link rel="stylesheet" href="../static/css/sitioWeb.css">
+
+
+    <!-- ENLACE DE GIT  -->
+    <!-- https://github.com/Angie1107liz/univentas.git -->
+
+</head>
+
+    <body>
+    <!-- Hero Area -->
+        <!-- Barra de navegacion inicio -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="../static/img/distribuidoraUniventas.png" class="logoUni" alt="Logo Uniasociados">
+            </div>
+            <button class="menu-toggle"><i class="fa-solid fa-bars" style="background-color: #292a29;"></i></button>
+            <div class="nav-links">
+                <!-- Botón de cierre (se mostrará cuando el menú esté abierto) -->
+                <button class="close-menu"><i class="fas fa-times"></i></button> 
+                <a href="./ciclos.html" class="nav-link">Ciclos</a>
+                <a href="./catalogo.html" class="nav-link">Catalogo</a>
+                <a href="./vendedores.html" class="nav-link">Vendedores</a>
+                <a href="./cerrarSesion.html" class="nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </nav>
+          <!-- Contenedor del visor del catálogo -->
+    <div class="promo-container">
+        <div class="promo-header">NUESTRO CICLO SEMANAL</div>
+        <div class="promo-body">
+            <div id="bookCiclo">
+                <!-- Las imágenes se agregarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevPage"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="nextPage"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="zoomIn"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+            <button id="zoomOut"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        </div>
+    </div>
+        <script src="../static/js/ciclo.js"></script>
+        <script src="../static/js/sitioWeb.js"></script>
+
+
+    </body>
+</html>
+
+
+C:\Users\Angie\OneDrive\Documentos\univentas\Front-end\sitioWeb\img\promociones

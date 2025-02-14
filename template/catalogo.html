@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Univentas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/catalogo.css">
+    <link rel="stylesheet" href="../static/css/sitioWeb.css">
+
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../static/img/distribuidoraUniventas.png" class="logoUni" alt="Logo Uniasociados">
+        </div>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links">
+            <!-- Botón de cierre (se mostrará cuando el menú esté abierto) -->
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+            <a href="./ciclos.html" class="nav-link">Ciclos</a>
+            <a href="./catalogo.html" class="nav-link">Catalogo</a>
+            <a href="./vendedores.html" class="nav-link">Vendedores</a>
+            <a href="./cerrarSesion.html" class="nav-link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </div>
+    </nav>
+    
+    <!-- Contenedor del visor del catálogo -->
+    <div class="viewer-container">
+        <div class="viewer-header">NUESTRO CATÁLOGO</div>
+        <div class="viewer-body">
+            <div id="pdfBook">
+                <!-- Las imágenes se agregarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevPage"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="nextPage"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="zoomIn"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+            <button id="zoomOut"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+            <button id="downloadPdf">Descargar PDF</button>
+        </div>
+    </div>
+
+    <script src="../static/js/catalogo.js"></script>
+    <script src="../static/js/sitioWeb.js"></script>
+
+</body>
+</html>

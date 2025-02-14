@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+/* INICIO ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+  box-sizing: border-box; /* Ajusta los tamaños para que incluyan padding y border */
+  /* background: linear-gradient( #ffffff, #013e9b); */
+  background: linear-gradient(45deg,
+  #0017478d 0,
+  #0017478d 100%) 0 0 / cover,
+url("../img/fondoDos.jpg") center center/cover no-repeat;
+}
+/* Estilo global para asegurar una visualización adecuada en diferentes dispositivos */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body.no-scroll {
+  overflow: hidden; /* Deshabilita el desplazamiento */
+}
+section {
+  margin: 0;
+  padding: 50px 20px;
+
+}
+.contenedor {
+  padding: 0;
+  margin: 0 auto;
+}
+h1 {
+  font-weight: bold;
+  z-index: 10;
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+  font-family: "Salsa", cursive;
+  font-style: normal;
+  font-size: 30px; 
+}
+/* FIN ESTILOS GENERALES */
+
+/* INICIO BARRA NAVEGACION */
+
+/* Estilos por defecto para pantallas grandes */
+/* INICIO BARRA NAVEGACION */
+
+.navbar {
+  z-index: 1000;
+  width: 100%;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  left: 0;
+}
+
+.logo-container {
+  transition: transform 0.3s ease; /* Suaviza el movimiento del logo */
+}
+
+.logo-container.shift-right {
+  transform: translateX(200px); /* Ajusta la distancia según lo necesario */
+}
+
+.logoUni {
+  width: 24rem;
+  height: auto;
+}
+
+
+/* Botón de menú tipo hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos de enlaces */
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  color: #013e9b;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Efecto hover de los enlaces */
+.nav-link:hover {
+  background-color: #ffbe33;
+  color: #2c4389;
+  border-radius: 5px;
+  height: 30px;
+  transform: scale(1.1);
+}
+
+/* Efecto activo para el enlace seleccionado */
+.nav-link:active {
+  background-color: #ffbe33;
+  color: #333;
+  transform: scale(1);
+}
+
+/* Botón de iniciar sesión */
+.botonIniciarSesion {
+  padding: 9px 22px;
+  font-size: 16px;
+  color: white;
+  background-color: #ffbe33;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.botonIniciarSesion:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+.botonIniciarSesion:active {
+  transform: scale(0.9);
+}
+
+/* Menú lateral en pantallas pequeñas y medianas */
+@media (max-width: 1128px) {
+  .menu-toggle {
+    display: block;
+    
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculto a la izquierda */
+    width: 70%;
+    height: 100%;
+    background-color: #ededed;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    transition: left 0.3s ease; /* Animación para el desplazamiento */
+  }
+
+  .nav-links.open {
+    left: 0; /* Muestra el menú desde la izquierda */
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .botonIniciarSesion {
+    font-size: 1.2rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Botón de cierre (solo visible en pantallas pequeñas) */
+  .close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    display: block; /* Visible en pantallas pequeñas */
+    cursor: pointer;
+  }
+
+  .close-menu:hover {
+    color: #ffbe33;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1129px) {
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    gap: 4rem;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+  }
+
+  .close-menu {
+    display: none; /* Asegura que no se muestre en pantallas grandes */
+  }
+}
+
+/* FIN BARRA NAVEGACION */

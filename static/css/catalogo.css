@@ -1,0 +1,130 @@
+/* Contenedor del libro */
+.viewer-container {
+  width: 100%;
+  height: 650px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  gap: 7px;
+  margin-top: 100px; /* Ajusta según la altura de tu barra de navegación */
+  
+}
+
+.viewer-header {
+  font-weight: bold;
+  z-index: 10;
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+  font-family: "Salsa", cursive;
+  font-style: normal;
+  font-size: 30px; 
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Añadir transición de visibilidad */
+}
+
+.viewer-header.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+#pdfBook {
+  width: 27rem;
+  height: 31rem;
+  position: relative;
+  perspective: 1000px;
+}
+
+.book-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 14px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  transform-origin: center right;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.book-page img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-page.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.book-page.flip {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.book-page.back {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+/* ✨ Levantamiento de la página antes de girar */
+.book-page.lifting {
+  transform: rotateY(-10deg) translateX(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✨ Efecto de volteo con levantamiento */
+.book-page.flipping {
+  transform: rotateY(-180deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Estilos para los botones flotantes */
+.controls {
+  position: fixed;
+  bottom: 20px; /* Colocarlos a 20px desde el fondo */
+  right: 35px;  /* Colocarlos a 20px desde la derecha */
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Asegura que los botones estén encima del contenido */
+}
+
+.controls button {
+  background-color: #e1e1e1;
+  color: rgb(83, 80, 80);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin: 5px 0; /* Margen entre los botones */
+}
+
+.controls button:hover {
+  background-color: #ffbe33;
+}
+
+/* Si quieres personalizar aún más los botones (como el tamaño o la distancia entre ellos), aquí se puede ajustar */
+.controls button:focus {
+  outline: none; /* Elimina el borde de enfoque cuando el botón está seleccionado */
+}
+
+
+
+
+

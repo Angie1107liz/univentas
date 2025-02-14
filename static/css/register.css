@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.titleLogin {
+    display: flex;
+    justify-content: center;
+    font-family: "Salsa", cursive;
+    color: #323232;
+    font-size: 35px;
+    position: relative;
+    top: 18px;
+}
+
+/* Estilos generales para todos los tamaños */
+.card {
+    width: 100%;
+    height: auto;
+    margin: 4rem auto;
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.logosLogin {
+    display: flex;
+    justify-content: flex-end;
+    width: 40rem;
+    position: relative;
+    bottom: 0;
+}
+
+.logoUniventas, .logoUnilever {
+    width: 40px;
+    height: 40px;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    width: 40rem;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.titleLogin {
+    display: flex;
+    justify-content: center;
+    font-family: "Salsa", cursive;
+    color: #323232;
+    font-size: 35px;
+    position: relative;
+    top: 10px;
+}
+
+.loginForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 8%;
+}
+
+.inputGroup {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Salsa", cursive;
+    color: #323232;
+    font-size: 16px;
+}
+
+.inputGroup input,
+.inputGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Salsa", cursive;
+    font-size: 14px;
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #013e9b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Salsa", cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton:hover {
+    background-color: #0d336bda;
+}
+
+a {
+    color: #0e0e0e70;
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Extrapequeñas: pantallas menores de 576px */
+@media (max-width: 575.98px) {
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .logosLogin {
+        margin: 0 auto;
+    }
+
+    .titleLogin {
+        font-size: 28px;
+        top: 10px;
+    }
+
+    .loginForm {
+        grid-template-columns: 1fr; /* Todo en una sola columna */
+    }
+
+    .loginButton {
+        width: 100%;
+    }
+
+    a {
+        left: 0;
+    }
+}
+
+/* Pequeñas: pantallas entre 576px y 767.98px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .logosLogin {
+        margin: 0 auto;
+    }
+
+    .titleLogin {
+        font-size: 30px;
+    }
+
+    .loginForm {
+        grid-template-columns: 1fr; /* Mantener una columna en pantallas pequeñas */
+    }
+
+    .loginButton {
+        width: 100%;
+    }
+
+    a {
+        left: 0;
+    }
+}
+
+/* Medianas: pantallas entre 768px y 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card {
+        width: 70%;
+        height: auto;
+    }
+
+    .loginForm {
+        grid-template-columns: 1fr;
+    }
+
+    .loginButton {
+        width: 60%;
+    }
+
+    a {
+        left: 0;
+    }
+}
+
+/* Grandes: pantallas entre 992px y 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .card {
+        width: 50%;
+        height: auto;
+    }
+
+    .loginForm {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .loginButton {
+        width: 50%;
+    }
+
+    a {
+        left: 10rem;
+    }
+}
+
+/* Extragrandes: pantallas de 1200px o más */
+@media (min-width: 1200px) {
+    .card {
+        width: 40%;
+        height: 80%;
+    }
+
+    .loginForm {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .loginButton {
+        width: 40%;
+    }
+
+    a {
+        top: 185%;
+    }
+}

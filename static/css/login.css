@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Salsa", cursive;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Tarjeta de inicio de sesión */
+.cardLogin {
+    width: 40%;
+    min-width: 300px; /* Ancho mínimo para responsividad */
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 4rem auto;
+}
+
+/* Logos */
+.logosLogin {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    position: relative;
+    bottom: 3rem;
+}
+
+.logoUniventas, .logoUnilever {
+    width: 40px;
+    height: 40px;
+}
+
+/* Botones de la barra de herramientas */
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+/* Título del Login */
+.titleLogin {
+    text-align: center;
+    color: #323232;
+    font-size: 35px;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+/* Formulario de Login */
+.loginForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 8%;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #323232;
+    font-size: 16px;
+}
+
+.inputGroup input,
+.inputGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    appearance: none;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+    border-color: #013e9b;
+    outline: none;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #013e9b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #0d336bda;
+}
+
+/* RESPONSEVIDAD PARA LOGIN */
+
+
+/* Pequeña (SM - 576px a 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cardLogin {
+        width: 80%;
+    }
+    .titleLogin {
+        font-size: 26px;
+    }
+    .loginButton {
+        font-size: 15px;
+    }
+}
+
+/* Mediana (MD - 768px a 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cardLogin {
+        width: 60%;
+    }
+    .titleLogin {
+        font-size: 30px;
+    }
+}
+
+/* Grande (LG - 992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .cardLogin {
+        width: 50%;
+    }
+}
+
+/* Extra grande (XL - 1200px en adelante) */
+@media (min-width: 1200px) {
+    .cardLogin {
+        width: 40%;
+        height: 80%;
+        
+    }
+}
