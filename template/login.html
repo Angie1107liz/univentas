@@ -18,47 +18,32 @@
 <body style="background-image: url('../static/img/fondoBodyLogin.jpg'); background-size: cover; background-position: center;"> 
 
     <!-- Contenedor centrado -->
-    <div class="container d-flex justify-content-center align-items-center vh-100"> 
-        <div class="cardLogin bg-white p-4 rounded shadow"> 
-            <!-- Botones de la barra de herramientas -->
-            <div class="tools mb-3">
-                <div class="circle d-inline-block mx-1"><span class="red box"></span></div>
-                <div class="circle d-inline-block mx-1"><span class="yellow box"></span></div>
-                <div class="circle d-inline-block mx-1"><span class="green box"></span></div>
-            </div>
-            <!-- Logos -->
-            <div class="logosLogin text-center mb-4">
-                <img src="../static/img/isotipoUniasociados.png" class="logoUniventas img-fluid" alt="Logo Univentas">
-                <img src="../static/img/logoUnilever.png" class="logoUnilever img-fluid" alt="Logo Unilever">
-            </div>
-
-            <!-- Título del Login -->
-            <div class="titleLogin text-center mb-4">
-                <h2>INICIAR SESIÓN</h2>
-            </div>
-
-            <!-- Formulario de Login -->
-            <form class="loginForm" method="POST">
-                <div class="mb-3">
-                    <label for="username" class="form-label">Usuario</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Ingresa tu usuario" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
-                    <a href="./recuperarContraseña.html" class="d-block mt-2">¿Olvidaste tu contraseña?</a>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 mb-3">Iniciar Sesión</button>
-                <a class="d-block text-center" href="./register.html">¿No tienes cuenta? Regístrate ahora</a>
-            </form>
+    <div class="cardLogin">
+        <div class="tools">
+                <img src="../static/img/isotipoUniasociados.png" class="logoUniventas" alt="">
+                <img src="../static/img/logoUnilever.png" class="logoUnilever" alt="">
         </div>
-    </div>
+            <div class="titleLogin">INICIAR SESIÓN</div>
+                <form class="loginForm"  id="loginForm" method="POST">
+                    <div class="inputGroup">
+                        <input type="text"id="correo_electronico" name="username" class="form-control" placeholder="Ingresa tu correo" required>
+                    </div>
+                    <div class="inputGroup">
+                        <input type="password" id="contrasena" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+                        <a href="./recuperarContrasena.html" class="d-block mt-2">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit" onclick="iniciarSesion()" class="btn btn-primary w-100 mb-3">Iniciar Sesión</button>
+                </form>
+                <div id="mensajeLogin"></div>
+                <a class="linkLogin" href="./register.html">¿No tienes cuenta? Regístrate ahora</a>
+            </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script de registro -->
-    <script src="./js/register.js"></script>
-</body>
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/welcome.js"></script>
+    </body>
 </html>

@@ -29,7 +29,7 @@ body {
 .card {
     width: 30%;
     height: 38rem;
-    margin: 7rem auto;
+    margin: 4rem auto;
     background-color: #F8FBFE;
     border-radius: 8px;
     z-index: 1;
@@ -101,7 +101,7 @@ body {
     align-items: center;
     position: relative;
     top: 5rem;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
@@ -143,8 +143,9 @@ body {
 }
 
 .loginButton {
-width: 45%;
+width: 80%;
 padding: 10px;
+margin: 8%;
 background-color: #013e9b;
 color: white;
 border: none;
@@ -152,6 +153,7 @@ border-radius: 5px;
 font-family: "Salsa", cursive;
 font-size: 16px;
 position: relative;
+top: 3%;
 cursor: pointer;
 transition: background-color 0.3s ease;
 }

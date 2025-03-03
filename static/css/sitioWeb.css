@@ -1,29 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 
 /* INICIO ESTILOS GENERALES */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-html,body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Evita el scroll horizontal */
   box-sizing: border-box; /* Ajusta los tamaños para que incluyan padding y border */
-  /* background: linear-gradient( #ffffff, #013e9b); */
-  background: linear-gradient(45deg,
-  #0017478d 0,
-  #0017478d 100%) 0 0 / cover,
-url("../img/fondoDos.jpg") center center/cover no-repeat;
+   background: 0 0 / cover,
+    url("../img/fondoFooterD.jpg") center center/cover no-repeat;
 }
 /* Estilo global para asegurar una visualización adecuada en diferentes dispositivos */
 *,
@@ -38,7 +35,6 @@ body.no-scroll {
 section {
   margin: 0;
   padding: 50px 20px;
-
 }
 .contenedor {
   padding: 0;
@@ -47,14 +43,14 @@ section {
 h1 {
   font-weight: bold;
   z-index: 10;
-  text-align: center; 
+  text-align: center;
   display: flex;
   justify-content: center;
   position: relative;
   color: #ffffff;
   font-family: "Salsa", cursive;
   font-style: normal;
-  font-size: 30px; 
+  font-size: 30px;
 }
 /* FIN ESTILOS GENERALES */
 
@@ -90,7 +86,6 @@ h1 {
   width: 24rem;
   height: auto;
 }
-
 
 /* Botón de menú tipo hamburguesa */
 .menu-toggle {
@@ -135,32 +130,11 @@ h1 {
   transform: scale(1);
 }
 
-/* Botón de iniciar sesión */
-.botonIniciarSesion {
-  padding: 9px 22px;
-  font-size: 16px;
-  color: white;
-  background-color: #ffbe33;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.botonIniciarSesion:hover {
-  transform: scale(1.1);
-  background-color: #0056b3;
-}
-
-.botonIniciarSesion:active {
-  transform: scale(0.9);
-}
 
 /* Menú lateral en pantallas pequeñas y medianas */
 @media (max-width: 1128px) {
   .menu-toggle {
     display: block;
-    
   }
 
   .nav-links {

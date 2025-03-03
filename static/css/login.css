@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Luckiest+Guy&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
 /* Estilos generales */
 * {
@@ -13,31 +16,43 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: "Salsa", cursive;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
 }
 
 body.no-scroll {
     overflow: hidden;
 }
-
+.titleLogin {
+    display: flex;
+    justify-content: center;
+    font-family: "Salsa", cursive;
+    color: #323232;
+    font-size: 35px;
+    position: relative;
+    top: 18px;
+}
 /* Tarjeta de inicio de sesión */
 .cardLogin {
-    width: 40%;
-    min-width: 300px; /* Ancho mínimo para responsividad */
+    width: 30%;
+    height: 70%;
+    margin: 8rem auto;
     background-color: #F8FBFE;
     border-radius: 8px;
+    z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 4rem auto;
 }
 
 /* Logos */
 .logosLogin {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    width: 6rem;
+    left: 25%;
+    gap: 20px;
     position: relative;
-    bottom: 3rem;
+    bottom: 0;
 }
 
 .logoUniventas, .logoUnilever {
@@ -49,7 +64,9 @@ body.no-scroll {
 .tools {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 9px;
+    width: 25rem;
 }
 
 .circle {
@@ -77,30 +94,33 @@ body.no-scroll {
 
 /* Título del Login */
 .titleLogin {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Salsa", cursive;
     color: #323232;
     font-size: 35px;
-    margin-bottom: 20px;
     position: relative;
-    bottom: 1.5rem;
+    top: 10px;
 }
 
 /* Formulario de Login */
 .loginForm {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
-    margin: 8%;
+    padding: 25px;
 }
 
 .inputGroup {
+    width: 100%;
     margin-bottom: 15px;
 }
 
 .inputGroup label {
     display: block;
     margin-bottom: 5px;
+    font-family: "Salsa", cursive;
     color: #323232;
     font-size: 16px;
 }
@@ -114,13 +134,10 @@ body.no-scroll {
     font-size: 14px;
     background-color: white;
     appearance: none;
+    cursor: pointer;
+
 }
 
-.inputGroup input:focus,
-.inputGroup select:focus {
-    border-color: #013e9b;
-    outline: none;
-}
 
 .loginButton {
     width: 100%;
@@ -138,44 +155,7 @@ body.no-scroll {
     background-color: #0d336bda;
 }
 
-/* RESPONSEVIDAD PARA LOGIN */
-
-
-/* Pequeña (SM - 576px a 767px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .cardLogin {
-        width: 80%;
-    }
-    .titleLogin {
-        font-size: 26px;
-    }
-    .loginButton {
-        font-size: 15px;
-    }
-}
-
-/* Mediana (MD - 768px a 991px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .cardLogin {
-        width: 60%;
-    }
-    .titleLogin {
-        font-size: 30px;
-    }
-}
-
-/* Grande (LG - 992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .cardLogin {
-        width: 50%;
-    }
-}
-
-/* Extra grande (XL - 1200px en adelante) */
-@media (min-width: 1200px) {
-    .cardLogin {
-        width: 40%;
-        height: 80%;
-        
-    }
+.linkLogin{
+    display: flex;
+    justify-content: center;
 }

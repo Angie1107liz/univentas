@@ -28,7 +28,7 @@ body {
 
 .card {
     width: 30%;
-    height: 38rem;
+    height: 30rem;
     margin: 7rem auto;
     background-color: #F8FBFE;
     border-radius: 8px;
@@ -92,7 +92,7 @@ body {
     color: #323232;
     font-size: 35px;
     position: relative;
-    top: 18px;
+    top: 15%;
 }
 
 .loginForm {
@@ -144,6 +144,7 @@ body {
 
 .loginButton {
 width: 45%;
+margin: 15px 80px;
 padding: 10px;
 background-color: #013e9b;
 color: white;
@@ -165,4 +166,11 @@ a {
     position: relative;
     left: 35%;
     top: 9rem;
+}
+
+
+#mensaje{
+    position: relative;
+    top: 15%;
+    left: 22%;
 }

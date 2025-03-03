@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+    <link rel="stylesheet" href="../static/css/restablecerContraseña.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-image: url('../static/img/fondoBodyLogin.jpg');">
+    <div class="card">
+        <div class="tools">
+                <img src="../static/img/isotipoUniasociados.png" class="logoUniventas" alt="">
+                <img src="../static/img/logoUnilever.png" class="logoUnilever" alt="">
+        </div>
+
+        <form  id="resetForm" class="loginForm">
+                <form id="restablecerForm">    
+                    <div class="titleLogin">Restablecer contraseña</div>
+
+                    <div class="inputGroup">
+                        <input type="password" id="nueva_contrasena" name="nueva_contrasena" placeholder="Ingresa tu nueva contraseña" required>
+                        <button type="submit" class="loginButton">Cambiar Contraseña</button>
+                    </div>
+                </form>
+        </form>
+        <p class="mensajeRestablecer" id="mensaje"></p>
+    </div>
+    <script src="../static/js/restablecerContrasena.js"></script>
+</body>
+</html>
